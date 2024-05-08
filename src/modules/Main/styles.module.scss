@@ -1,0 +1,151 @@
+﻿.main {
+  max-width: var(--page-max-width-main);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 8px;
+  min-height: 100%;
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .section__speakers {
+    margin-top: -40px;
+  }
+
+  .main {
+    &__subtitle {
+      font-size: 10px;
+    }
+
+    &__title {
+      font-size: 20px;
+      flex-wrap: wrap;
+    }
+
+    &__button {
+      flex: 1;
+      margin: 8px 0px 0px 0px;
+    }
+  }
+
+  .section {
+    &__title {
+      border-radius: 5px;
+      background-color: var(--course-text-red);
+      color: var(--course-color-white);
+      font-size: 20px;
+      margin-bottom: 24px;
+      padding: 8px 16px;
+
+      & span {
+        color: var(--course-color-white) !important;
+      }
+    }
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 16px;
+
+    &__container {
+      flex: 1;
+
+      &-image {
+        text-align: center;
+        margin-top: 40px;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__image {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    & .item {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    & .program {
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 5px 10px 5px;
+
+      &__container {
+        flex: 1;
+        width: 100%;
+      }
+
+      &__image {
+        flex: 0;
+        margin-right: 15px;
+      }
+
+      &__count {
+        font-size: 12px;
+      }
+    }
+
+    & .additional {
+      padding: 0px;
+
+      &__wrapper {
+        flex-direction: column;
+        gap: 16px;
+
+        &:not(:last-child):after {
+          left: 0px;
+        }
+      }
+
+      &__container {
+        flex: 1;
+
+        &:first-child {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .button-card {
+    margin: 0px 0px 23px 0px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main__subtitle {
+    font-size: 10px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+
+    &__container {
+      &-image {
+        text-align: center;
+      }
+    }
+
+    &__image {
+      max-width: 320px;
+      width: 100%;
+    }
+  }
+}

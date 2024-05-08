@@ -1,10 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import MainPage from 'pages/Main';
+import ErrorPage from 'pages/Error';
+import { store } from 'store/store';
+import Error from 'components/Error';
+import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const router = createBrowserRouter([
+  {
+    path: '/personnel_selection',
+    element: <MainPage />,
+    errorElement: <Error />
+  },
+  // {
+  //   path: '/financial_consciousness/:id',
+  //   element: <Course />
+  //   // errorElement: <Error />
+  // },
+  {
+    path: '*',
+    element: <ErrorPage />
+  }
+]);
+
+ReactDOM.createRoot(
+  document.getElementById('root-personnel-selection') as HTMLElement
+).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  </React.StrictMode>
+);
