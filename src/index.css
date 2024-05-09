@@ -21,16 +21,16 @@
 }
 
 :root {
-  --course-text-red: rgba(180, 8, 102, 1);
-  --course-text-black: rgba(26, 34, 44, 1);
-  --course-text-black-gray: rgba(135, 138, 142, 1);
-  --course-text-gray: rgba(208, 212, 217, 1);
-  --course-light-red: rgba(223, 10, 107, 1);
-  --course-color-white: rgba(255, 255, 255, 1);
-  --course-text-ligth-gray: rgba(208, 212, 217, 1);
-  --course-text-dark-gray: rgba(141, 142, 145, 1);
+  --page-color-red: rgba(225, 37, 27, 1);
+  --page-color-black: rgba(26, 34, 44, 1);
+  --page-color-white: rgba(255, 255, 255, 1);
+  --page-color-blue: rgba(2, 50, 74, 1);
+  --page-color-dark-blue: rgba(0, 50, 75, 1);
+  --page-color-ligth-blue: rgba(0, 124, 255, 1);
+  --page-color-gray: rgba(208, 212, 217, 1);
+  --page-color-dark-gray: rgba(141, 142, 145, 1);
   --page-max-width-layout: 1440px;
-  --page-max-width-main: 1240px;
+  --page-max-width-main: 1256px;
 }
 
 #content.page-content {
@@ -51,12 +51,8 @@
   min-height: 100vh;
 }
 
-#root-personnel-selection .title-red {
-  color: var(--course-text-red);
-}
-
-#root-personnel-selection .title-gray {
-  color: var(--course-text-black-gray);
+#root-personnel-selection button {
+  font-family: 'Verdana' !important;
 }
 
 #wt-container > footer {
