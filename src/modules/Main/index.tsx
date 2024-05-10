@@ -1,6 +1,8 @@
 ﻿import HeaderImage from 'components/Header';
 import Header from './components/Header';
 import Filters from './components/Filters';
+import Links from './components/Links';
+import Sections from './components/Sections';
 import styles from './styles.module.scss';
 
 const Main = () => {
@@ -8,11 +10,12 @@ const Main = () => {
     <>
       <HeaderImage />
       <main className={styles.main}>
+        <Header />
         <section>
-          <Header />
           <Filters />
+          <Links />
         </section>
-        <section>MAIN</section>
+        <Sections />
       </main>
     </>
   );

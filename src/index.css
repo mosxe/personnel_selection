@@ -29,6 +29,7 @@
   --page-color-ligth-blue: rgba(0, 124, 255, 1);
   --page-color-gray: rgba(208, 212, 217, 1);
   --page-color-dark-gray: rgba(141, 142, 145, 1);
+  --page-color-purple: rgba(122, 47, 150, 1);
   --page-max-width-layout: 1440px;
   --page-max-width-main: 1256px;
 }

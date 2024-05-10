@@ -4,6 +4,67 @@
   gap: 30px;
   margin-top: 30px;
 
+  &__navs {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    align-self: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.45px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 16px 24px;
+    border: 1px solid var(--page-color-gray);
+    background-color: var(--page-color-white);
+    color: var(--page-color-gray);
+    cursor: pointer;
+    outline: 0 !important;
+    margin: 0px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+
+    &_active {
+      cursor: default;
+      color: var(--page-color-dark-blue) !important;
+      border-color: var(--page-color-dark-blue) !important;
+      background-color: var(--page-color-white) !important;
+
+      & svg {
+        fill: none !important;
+
+        & path {
+          stroke: var(--page-color-dark-blue);
+        }
+      }
+    }
+
+    & svg path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: var(--page-color-dark-gray);
+      border-color: var(--page-color-gray);
+      background-color: var(--page-color-gray);
+    }
+
+    &:active {
+      color: rgba(230, 234, 239, 1);
+      border-color: var(--page-color-dark-blue);
+      background-color: var(--page-color-blue) !important;
+    }
+  }
+
   &__btns {
     display: flex;
     gap: 8px;
@@ -58,61 +119,6 @@
       color: var(--page-color-white);
     }
   }
-
-  // &__btn {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   gap: 10px;
-  //   width: 100%;
-  //   align-self: center;
-  //   font-weight: 700;
-  //   font-size: 16px;
-  //   line-height: 19.45px;
-  //   letter-spacing: 0.5px;
-  //   text-transform: uppercase;
-  //   border-radius: 5px;
-  //   padding: 16px 24px;
-  //   border: 1px solid var(--page-color-gray);
-  //   background-color: var(--page-color-white);
-  //   color: var(--page-color-gray);
-  //   cursor: pointer;
-  //   outline: 0 !important;
-  //   margin: 0px;
-  //   transition: all 0.3s ease;
-  //   white-space: nowrap;
-
-  //   &_active {
-  //     cursor: default;
-  //     color: var(--page-color-dark-blue) !important;
-  //     border-color: var(--page-color-dark-blue) !important;
-  //     background-color: var(--page-color-white) !important;
-
-  //     & svg {
-  //       fill: none !important;
-
-  //       & path {
-  //         stroke: var(--page-color-dark-blue);
-  //       }
-  //     }
-  //   }
-
-  //   & svg path {
-  //     transition: all 0.3s;
-  //   }
-
-  //   &:hover {
-  //     color: var(--page-color-dark-gray);
-  //     border-color: var(--page-color-gray);
-  //     background-color: var(--page-color-gray);
-  //   }
-
-  //   &:active {
-  //     color: rgba(230, 234, 239, 1);
-  //     border-color: var(--page-color-dark-blue);
-  //     background-color: var(--page-color-blue) !important;
-  //   }
-  // }
 
   &__wrapper {
     padding: 10px;
