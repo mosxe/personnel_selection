@@ -4,6 +4,42 @@
   border: 2px solid var(--page-color-purple);
   cursor: pointer;
 
+  &_hover {
+    position: relative;
+
+    &::before {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background: rgb(208, 212, 217);
+      border-radius: 8px;
+      z-index: 10;
+      transition: opacity 0.3s;
+    }
+
+    &:hover {
+      & .card__background {
+        opacity: 1;
+      }
+      &::before {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &_hover.card_passed:hover {
+    opacity: 1;
+  }
+
+  &_passed {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -14,6 +50,13 @@
     position: relative;
     z-index: 1;
     height: 223px;
+
+    &_background {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     & img {
       width: 100%;
@@ -26,12 +69,9 @@
 
   &__type {
     position: absolute;
-    top: 10;
-    left: 10;
-    padding: 6px 8px;
-    border-radius: 10px;
-    border: 1px solid var(--page-color-dark-blue);
-    background-color: red;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
   }
 
   &__content {
@@ -59,6 +99,7 @@
     color: var(--page-color-white);
     background-color: var(--page-color-red);
     border: 1px solid var(--page-color-white);
+    z-index: 5;
 
     &_active {
       background-color: var(--page-color-ligth-blue);
@@ -82,7 +123,53 @@
     line-height: 17px;
     color: var(--page-color-dark-gray);
   }
+
+  &__background {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    color: var(--page-color-black);
+    text-transform: uppercase;
+    z-index: 50;
+    transition: opacity 0.3s;
+  }
 }
 
 .type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--page-color-white);
+  background-color: rgba(223, 10, 119, 1);
+
+  &__text {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.58px;
+    color: var(--page-color-white);
+  }
+
+  &_white {
+    background-color: var(--page-color-white);
+    border-color: var(--page-color-dark-blue);
+
+    & .type__text {
+      color: var(--page-color-dark-blue);
+    }
+  }
+
+  &_dark {
+    background-color: var(--page-color-dark-blue);
+  }
 }
