@@ -9,17 +9,16 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const CheckBox = ({ id, label, checked = false, onChange }: Props) => {
-  const name = `tag_${id}`;
+  const tagId = `tag_${id}`;
   const className = checked
     ? `${styles.checkbox} ${styles.checkbox_checked}`
     : styles.checkbox;
   return (
     <div className={className}>
-      <label htmlFor={name} className={styles.checkbox__label}>
+      <label htmlFor={tagId} className={styles.checkbox__label}>
         <input
-          id={name}
+          id={tagId}
           type='checkbox'
-          name={name}
           checked={checked}
           onChange={(e) => onChange?.(e)}
         />

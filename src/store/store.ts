@@ -1,4 +1,5 @@
 ﻿import { configureStore } from '@reduxjs/toolkit';
+import { IDataItem, Role } from 'types';
 import { API } from './apiSlice';
 
 export const store = configureStore({
@@ -10,16 +11,19 @@ export const store = configureStore({
 });
 
 export const initialState = {
-  course: null,
-  compound_program: {
-    id: '',
-    data: []
+  dataProcess: {
+    data: [] as IDataItem[],
+    tags: [] as string[]
   },
-  materials: {
-    title: '',
-    description: '',
-    data: null
+  dataWorking: {
+    data: [] as IDataItem[],
+    tags: [] as string[]
   },
+  dataInterview: {
+    data: [] as IDataItem[],
+    tags: [] as string[]
+  },
+  role: 'guest' as Role,
   isError: false,
   errorMessage: ''
 };

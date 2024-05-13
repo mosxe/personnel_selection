@@ -1,9 +1,14 @@
 ﻿import { useState } from 'react';
 import Navs from './Navs';
 import CheckBox from 'components/CheckBox';
+import { Role } from 'types';
 import styles from './styles.module.scss';
 
-const Filters = () => {
+type Props = {
+  role: Role;
+};
+
+const Filters = ({ role }: Props) => {
   const [tags, setTags] = useState([
     {
       id: 1,
@@ -32,7 +37,7 @@ const Filters = () => {
 
   return (
     <div className={styles.filters}>
-      <Navs />
+      <Navs role={role} />
       <div className={styles.filters__wrapper}>
         <div className={styles.filters__text}>
           Воспользуйтесь фильтром, чтобы посмотреть подборку материалов

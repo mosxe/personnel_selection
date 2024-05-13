@@ -1,58 +1,38 @@
-﻿export interface IError {
+﻿export type Type =
+  | 'Видео'
+  | 'Электронный курс'
+  | 'Тренинг'
+  | 'Тренажёр'
+  | 'Памятка'
+  | 'Шаблон'
+  | 'Документ'
+  | 'Тест'
+  | 'Инструкция';
+export type Status = 'новый' | 'в процессе' | 'завершено';
+export type Category = 'material' | 'hiring' | 'selection';
+export type Role = 'manager' | 'hr_bp' | 'recruiter' | 'guest';
+
+export interface IDataItem {
+  id: number;
+  type: Type;
+  title: string;
+  desc: string;
+  status: Status;
+  category: Category;
+  image: string;
+  tags: string[];
+}
+
+export interface IDataSection {
+  data: IDataItem[];
+  tags: string[];
+}
+
+export interface IResponseData {
+  dataProcess: IDataSection;
+  dataWorking: IDataSection;
+  dataInterview: IDataSection;
+  role: Role;
   isError: boolean;
   errorMessage: string;
 }
-
-export type IData = Record<string, any> | null;
-
-export interface ICourseModule {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  information: string;
-  image_link: string;
-  image_large_link: string;
-}
-
-export interface ICourseLesson {
-  module_id: string;
-  lesson_id: string;
-  title: string;
-  subtitle: string;
-  speakers: string;
-  description: string;
-}
-
-export interface ICompoundProgramLesson {
-  module_id: string;
-  lesson_id: string;
-  name: string;
-  link: string;
-  state_id: string;
-  is_required: boolean;
-  type: string;
-  status_name?: string;
-  score?: string;
-  max_score?: string;
-  finish_date?: string;
-}
-
-export interface ICompoundProgram {
-  id: string;
-  name: string;
-  state_id: string;
-  is_show_rewiev?: boolean;
-  lessons: ICompoundProgramLesson[];
-}
-
-export interface ICourseResponse extends IError {
-  course: IData;
-  compound_program: {
-    id: string;
-    data: ICompoundProgram[];
-  };
-  materials: IMaterialsResponse;
-}
-
-export type Role = 'manager' | 'hr_bp' | 'recruiter' | 'guest';
