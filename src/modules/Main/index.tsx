@@ -22,8 +22,20 @@ const Main = () => {
     );
   }
 
-  if (isError) {
+  if (isError || data.isError) {
     return <Error />;
+  }
+
+  if (data.role === 'guest') {
+    return (
+      <>
+        <HeaderImage />
+        <main className={styles.main}>
+          <Header />
+          <div>Недостаточно прав доступа!</div>
+        </main>
+      </>
+    );
   }
   return (
     <>
@@ -32,9 +44,9 @@ const Main = () => {
         <Header />
         <Sections
           role={data.role}
-          dataProcess={data.dataProcess}
-          dataWorking={data.dataWorking}
-          dataInterview={data.dataInterview}
+          dataManager={data.dataManager}
+          dataHRBP={data.dataHRBP}
+          dataRecruiter={data.dataRecruiter}
         />
       </main>
     </>

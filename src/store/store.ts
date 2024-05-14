@@ -11,16 +11,22 @@ export const store = configureStore({
 });
 
 export const initialState = {
-  dataProcess: {
-    data: [] as IDataItem[],
+  dataManager: {
+    dataProcess: [] as IDataItem[],
+    dataWorking: [] as IDataItem[],
+    dataInterview: [] as IDataItem[],
     tags: [] as string[]
   },
-  dataWorking: {
-    data: [] as IDataItem[],
+  dataHRBP: {
+    dataProcess: [] as IDataItem[],
+    dataWorking: [] as IDataItem[],
+    dataInterview: [] as IDataItem[],
     tags: [] as string[]
   },
-  dataInterview: {
-    data: [] as IDataItem[],
+  dataRecruiter: {
+    dataProcess: [] as IDataItem[],
+    dataWorking: [] as IDataItem[],
+    dataInterview: [] as IDataItem[],
     tags: [] as string[]
   },
   role: 'guest' as Role,

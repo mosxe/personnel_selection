@@ -20,7 +20,7 @@ const CheckBox = ({ id, label, checked = false, onChange }: Props) => {
           id={tagId}
           type='checkbox'
           checked={checked}
-          onChange={(e) => onChange?.(e)}
+          onChange={onChange}
         />
         <span className={styles.checkbox__value}></span>
         <div className={styles.checkbox__text}>

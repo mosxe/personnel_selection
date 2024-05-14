@@ -33,21 +33,6 @@
     transition: all 0.3s ease;
     white-space: nowrap;
 
-    &_active {
-      cursor: default;
-      color: var(--page-color-dark-blue) !important;
-      border-color: var(--page-color-dark-blue) !important;
-      background-color: var(--page-color-white) !important;
-
-      & svg {
-        fill: none !important;
-
-        & path {
-          stroke: var(--page-color-dark-blue);
-        }
-      }
-    }
-
     & svg path {
       transition: all 0.3s;
     }
@@ -61,7 +46,22 @@
     &:active {
       color: rgba(230, 234, 239, 1);
       border-color: var(--page-color-dark-blue);
-      background-color: var(--page-color-blue) !important;
+      background-color: var(--page-color-blue);
+    }
+
+    &_active {
+      cursor: default;
+      color: var(--page-color-dark-blue) !important;
+      border-color: var(--page-color-dark-blue) !important;
+      background-color: var(--page-color-white) !important;
+
+      & svg {
+        fill: none !important;
+
+        & path {
+          stroke: var(--page-color-dark-blue);
+        }
+      }
     }
   }
 
@@ -98,6 +98,13 @@
       color: var(--page-color-black);
     }
 
+    &:disabled {
+      cursor: default;
+      border-color: var(--page-color-gray) !important;
+      color: var(--page-color-gray) !important;
+      background-color: var(--page-color-white) !important;
+    }
+
     &_clear {
       border: 1px solid var(--page-color-dark-gray);
       color: var(--page-color-dark-gray);
@@ -117,6 +124,14 @@
       border-color: var(--page-color-dark-blue);
       background-color: var(--page-color-blue);
       color: var(--page-color-white);
+    }
+
+    &_active + &_clear {
+      color: rgba(230, 234, 239, 1);
+
+      &:hover {
+        color: var(--page-color-blue);
+      }
     }
   }
 

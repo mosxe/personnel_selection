@@ -26,17 +26,24 @@ export const API = createApi({
       transformResponse: (response: IResponseData) => {
         if (import.meta.env.DEV) {
           const mockDataResponse: IResponseData = {
-            dataProcess: {
-              data: mockData.dataProcess.data as IDataItem[],
-              tags: mockData.dataProcess.tags as string[]
+            dataManager: {
+              dataProcess: mockData.dataManager.dataProcess as IDataItem[],
+              dataWorking: mockData.dataManager.dataWorking as IDataItem[],
+              dataInterview: mockData.dataManager.dataInterview as IDataItem[],
+              tags: mockData.dataManager.tags
             },
-            dataWorking: {
-              data: mockData.dataWorking.data as IDataItem[],
-              tags: mockData.dataWorking.tags as string[]
+            dataHRBP: {
+              dataProcess: mockData.dataHRBP.dataProcess as IDataItem[],
+              dataWorking: mockData.dataHRBP.dataWorking as IDataItem[],
+              dataInterview: mockData.dataHRBP.dataInterview as IDataItem[],
+              tags: mockData.dataHRBP.tags
             },
-            dataInterview: {
-              data: mockData.dataInterview.data as IDataItem[],
-              tags: mockData.dataInterview.tags as string[]
+            dataRecruiter: {
+              dataProcess: mockData.dataRecruiter.dataProcess as IDataItem[],
+              dataWorking: mockData.dataRecruiter.dataWorking as IDataItem[],
+              dataInterview: mockData.dataRecruiter
+                .dataInterview as IDataItem[],
+              tags: mockData.dataRecruiter.tags
             },
             role: mockData.role as Role,
             isError: false,
