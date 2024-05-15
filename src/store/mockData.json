@@ -4,29 +4,29 @@
       {
         "id": 1,
         "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
+        "title": "Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 ",
         "desc": "вводная информация о подборе персонала в компании",
         "status": "в процессе",
         "category": "material",
         "role": "hr_bp",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": []
       },
       {
         "id": 2,
         "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
+        "title": "Подбор персонала в ОМК. Введение 2",
         "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
+        "status": "завершено",
         "category": "material",
         "role": "hr_bp",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": ["Видео"]
       },
       {
         "id": 3,
         "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
+        "title": "Подбор персонала в ОМК. Введение 3",
         "desc": "вводная информация о подборе персонала в компании",
         "status": "в процессе",
         "category": "material",
@@ -39,7 +39,7 @@
       {
         "id": 1,
         "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
+        "title": "Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение ",
         "desc": "вводная информация о подборе персонала в компании",
         "status": "в процессе",
         "category": "hiring",
@@ -55,7 +55,7 @@
         "status": "новый",
         "category": "material",
         "role": "manager",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": ["Тренажёр"]
       },
       {
@@ -86,11 +86,11 @@
         "id": 1,
         "type": "Шаблон",
         "title": "Памятка по проведению интервью",
-        "desc": "материал для скачивания",
+        "desc": "материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания",
         "status": "",
         "category": "hiring",
         "role": "recruiter",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": ["Шаблон"]
       },
       {
@@ -136,6 +136,28 @@
         "role": "hr_bp",
         "image": "",
         "tags": []
+      },
+      {
+        "id": 6,
+        "type": "Электронный курс 33",
+        "title": "Электронный курс секреты успешного найма",
+        "desc": "курс",
+        "status": "завершено",
+        "category": "selection",
+        "role": "hr_bp",
+        "image": "",
+        "tags": []
+      },
+      {
+        "id": 7,
+        "type": "Электронный курс 55",
+        "title": "Электронный курс секреты успешного найма",
+        "desc": "курс",
+        "status": "завершено",
+        "category": "selection",
+        "role": "hr_bp",
+        "image": "",
+        "tags": []
       }
     ],
     "tags": ["Шаблон", "Документ", "Тест", "Инструкция"]
@@ -150,7 +172,7 @@
         "status": "в процессе",
         "category": "material",
         "role": "hr_bp",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": []
       },
       {
@@ -161,7 +183,7 @@
         "status": "в процессе",
         "category": "material",
         "role": "hr_bp",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": ["Видео"]
       },
       {
@@ -172,7 +194,7 @@
         "status": "в процессе",
         "category": "material",
         "role": "manager",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": ["Тренинг", "Инструкция"]
       }
     ],
@@ -231,7 +253,7 @@
         "status": "",
         "category": "hiring",
         "role": "recruiter",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": ["Шаблон"]
       },
       {
@@ -291,7 +313,7 @@
         "status": "в процессе",
         "category": "material",
         "role": "hr_bp",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": []
       },
       {
@@ -383,7 +405,7 @@
         "status": "",
         "category": "material",
         "role": "manager",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": ["Документ"]
       },
       {
@@ -400,12 +422,12 @@
       {
         "id": 4,
         "type": "Инструкция",
-        "title": "Инструкция секреты успешного найма",
+        "title": "Инструкция секреты успешного найма ",
         "desc": "материал для скачивания",
         "status": "",
         "category": "hiring",
         "role": "manager",
-        "image": "",
+        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
         "tags": ["Инструкция"]
       },
       {
@@ -422,7 +444,7 @@
     ],
     "tags": ["Шаблон", "Документ", "Тест", "Инструкция", "Электронный курс"]
   },
-  "role": "recruiter",
+  "role": "hr_bp",
   "isError": false,
   "errorMessage": ""
 }

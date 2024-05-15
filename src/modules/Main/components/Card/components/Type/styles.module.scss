@@ -1,0 +1,31 @@
+﻿.type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--page-color-white);
+  background-color: rgba(223, 10, 119, 1);
+
+  &__text {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.58px;
+    color: var(--page-color-white);
+  }
+
+  &_white {
+    background-color: var(--page-color-white);
+    border-color: var(--page-color-dark-blue);
+
+    & .type__text {
+      color: var(--page-color-dark-blue);
+    }
+  }
+
+  &_dark {
+    background-color: var(--page-color-dark-blue);
+  }
+}

@@ -1,8 +1,21 @@
 ﻿.card {
   flex: 0 1 calc(33.333% - 20px);
+  min-width: 389px;
   border-radius: 10px;
-  border: 2px solid var(--page-color-purple);
+  border: 2px solid transparent;
   cursor: pointer;
+
+  &_red {
+    border-color: rgba(94, 0, 56, 1);
+  }
+
+  &_blue {
+    border-color: rgba(73, 31, 203, 1);
+  }
+
+  &_purple {
+    border-color: rgba(122, 47, 150, 1);
+  }
 
   &_hover {
     position: relative;
@@ -40,16 +53,32 @@
     transition: opacity 0.3s;
   }
 
+  &_shadow {
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0px 1px 3px 0px rgba(0, 50, 75, 0.02),
+        0px 3px 7px 0px rgba(0, 50, 75, 0.03),
+        9px 5px 15px 0px rgba(0, 50, 75, 0.03),
+        13px 11px 29px 0px rgba(0, 50, 75, 0.04),
+        3px 31px 80px 0px rgba(0, 50, 75, 0.06);
+    }
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   &__img {
     position: relative;
     z-index: 1;
     height: 223px;
+    background-color: var(--page-color-gray);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 
     &_background {
       position: absolute;
@@ -58,7 +87,21 @@
       transform: translate(-50%, -50%);
     }
 
-    & img {
+    &_circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 107px;
+      height: 107px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    & > img {
       width: 100%;
       height: 100%;
       border-top-left-radius: 8px;
@@ -139,37 +182,5 @@
     text-transform: uppercase;
     z-index: 50;
     transition: opacity 0.3s;
-  }
-}
-
-.type {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  flex-wrap: nowrap;
-  padding: 6px 8px;
-  border-radius: 10px;
-  border: 1px solid var(--page-color-white);
-  background-color: rgba(223, 10, 119, 1);
-
-  &__text {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.58px;
-    color: var(--page-color-white);
-  }
-
-  &_white {
-    background-color: var(--page-color-white);
-    border-color: var(--page-color-dark-blue);
-
-    & .type__text {
-      color: var(--page-color-dark-blue);
-    }
-  }
-
-  &_dark {
-    background-color: var(--page-color-dark-blue);
   }
 }

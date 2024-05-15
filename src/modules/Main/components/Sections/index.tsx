@@ -3,7 +3,8 @@ import Filters from '../Filters';
 import Links from '../Links';
 import Title from './components/Title';
 import Section from './components/Section';
-import { Role, IResponseItem, Tags } from 'types';
+import { Role, IResponseItem, Tags, IDataItem } from 'types';
+import { filteringDataTags } from './helps';
 import ProcessImage from 'assets/svg/process.svg';
 import WorkingImage from 'assets/svg/working.svg';
 import InterviewImage from 'assets/svg/interview.svg';
@@ -16,14 +17,32 @@ type Props = {
   role: Role;
 };
 
+type filteredDataState = {
+  dataProcess: IDataItem[];
+  dataWorking: IDataItem[];
+  dataInterview: IDataItem[];
+  isActive: boolean;
+};
+
+const initialStateFilteredData = {
+  dataProcess: [],
+  dataWorking: [],
+  dataInterview: [],
+  isActive: false
+};
+
 const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
   const [navRole, setNavRole] = useState<Role>(role);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<Tags>([]);
+  const [filteredData, setFilteredData] = useState<filteredDataState>(
+    initialStateFilteredData
+  );
 
   const handleClickNav = (role: Role) => {
     if (role !== navRole) {
       setNavRole(role);
       setSelectedTags([]);
+      setFilteredData(initialStateFilteredData);
     }
   };
 
@@ -54,26 +73,95 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
   }, [navRole, dataManager.tags, dataRecruiter.tags, dataHRBP.tags]);
 
   const onShow = () => {
-    console.log('onShow');
+    switch (navRole) {
+      case 'manager':
+        {
+          const tempDataProcess = filteringDataTags(
+            dataManager.dataProcess,
+            selectedTags
+          );
+          const tempDataWorking = filteringDataTags(
+            dataManager.dataWorking,
+            selectedTags
+          );
+          const tempDataInterview = filteringDataTags(
+            dataManager.dataInterview,
+            selectedTags
+          );
+          setFilteredData({
+            dataProcess: tempDataProcess,
+            dataWorking: tempDataWorking,
+            dataInterview: tempDataInterview,
+            isActive: true
+          });
+        }
+        break;
+      case 'recruiter':
+        {
+          const tempDataProcess = filteringDataTags(
+            dataRecruiter.dataProcess,
+            selectedTags
+          );
+          const tempDataWorking = filteringDataTags(
+            dataRecruiter.dataWorking,
+            selectedTags
+          );
+          const tempDataInterview = filteringDataTags(
+            dataRecruiter.dataInterview,
+            selectedTags
+          );
+          setFilteredData({
+            dataProcess: tempDataProcess,
+            dataWorking: tempDataWorking,
+            dataInterview: tempDataInterview,
+            isActive: true
+          });
+        }
+        break;
+      case 'hr_bp':
+        {
+          const tempDataProcess = filteringDataTags(
+            dataHRBP.dataProcess,
+            selectedTags
+          );
+          const tempDataWorking = filteringDataTags(
+            dataHRBP.dataWorking,
+            selectedTags
+          );
+          const tempDataInterview = filteringDataTags(
+            dataHRBP.dataInterview,
+            selectedTags
+          );
+          setFilteredData({
+            dataProcess: tempDataProcess,
+            dataWorking: tempDataWorking,
+            dataInterview: tempDataInterview,
+            isActive: true
+          });
+        }
+        break;
+      default:
+        break;
+    }
   };
 
   const onClear = () => {
     setSelectedTags([]);
+    setFilteredData(initialStateFilteredData);
   };
-  // const
-  // const treeData = useMemo(() => {
-  // 	const filterBy = (arr: DataNode[], query: string): DataNode[] => {
-  // 		return query ? arr.reduce((acc: DataNode[], item: any) => {
-  // 		  if (item.children?.length ) {
-  // 			 const filtered = filterBy(item.children, query)
-  // 			 if ( filtered.length ) return [...acc, {...item, children:filtered}]
-  // 		  }
-  // 		  const {children, ...itemWithoutChildren} = item;
-  // 		  return item.title?.toLowerCase().includes(query.toLowerCase()) ? [...acc, itemWithoutChildren] : acc
-  // 		},[]) : arr
-  // 	  }
-  // 	return filterBy(data?.items || [], searchValue);
-  //   }, [searchValue, data?.items]);
+
+  const dataSection = () => {
+    switch (navRole) {
+      case 'manager':
+        return filteredData.isActive ? filteredData : dataManager;
+      case 'recruiter':
+        return filteredData.isActive ? filteredData : dataHRBP;
+      case 'hr_bp':
+        return filteredData.isActive ? filteredData : dataRecruiter;
+      default:
+        return filteredData;
+    }
+  };
 
   return (
     <>
@@ -88,13 +176,13 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
         onClear={onClear}
       />
       <Links />
-      {/* <section className={styles.section}>
+      <section className={styles.section}>
         <Title
           title='Процесс подбора персонала в ОМК'
           image={ProcessImage}
           tooltipText='В этом разделе вы найдете материалы, которые поясняют как устроен процесс найма персонала в ОМК'
         />
-        <Section data={dataProcess.data} />
+        <Section data={dataSection().dataProcess} />
       </section>
       <section className={styles.section}>
         <Title
@@ -102,7 +190,7 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
           image={WorkingImage}
           tooltipText='В этом разделе вы найдете материалы, которые поясняют как устроен процесс найма персонала в ОМК'
         />
-        <Section data={dataWorking.data} />
+        <Section data={dataSection().dataWorking} />
       </section>
       <section className={styles.section}>
         <Title
@@ -110,8 +198,8 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
           image={InterviewImage}
           tooltipText='В этом разделе вы найдете материалы, которые поясняют как устроен процесс найма персонала в ОМК'
         />
-        <Section data={dataInterview.data} />
-      </section> */}
+        <Section data={dataSection().dataInterview} />
+      </section>
     </>
   );
 };

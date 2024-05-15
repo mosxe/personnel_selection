@@ -1,20 +1,20 @@
-﻿import VideoImage from 'assets/svg/video.svg';
-import CourseImage from 'assets/svg/course.svg';
-import TreningImage from 'assets/svg/trening.svg';
-import TrenagerImage from 'assets/svg/trenager.svg';
-import MemoImage from 'assets/svg/memo.svg';
-import DocImage from 'assets/svg/doc.svg';
-import PdfImage from 'assets/svg/pdf.svg';
-import TestImage from 'assets/svg/test.svg';
-import InstructionImage from 'assets/svg/instruction.svg';
+﻿import { Type } from 'types';
+import VideoImage from 'assets/svg/status_video.svg';
+import CourseImage from 'assets/svg/status_course.svg';
+import TreningImage from 'assets/svg/status_trening.svg';
+import TrenagerImage from 'assets/svg/status_trenager.svg';
+import MemoImage from 'assets/svg/status_memo.svg';
+import DocImage from 'assets/svg/status_doc.svg';
+import PdfImage from 'assets/svg/status_pdf.svg';
+import TestImage from 'assets/svg/status_test.svg';
+import InstructionImage from 'assets/svg/status_instruction.svg';
 import styles from './styles.module.scss';
 
 type Props = {
-  id: string;
-  text: string;
+  type: Type;
 };
-const Type = ({ id, text }: Props) => {
-  const name = 'Тренажёр';
+
+const CardType = ({ type }: Props) => {
   const srcImages = {
     Памятка: MemoImage,
     Шаблон: DocImage,
@@ -23,12 +23,12 @@ const Type = ({ id, text }: Props) => {
     Инструкция: InstructionImage
   };
 
-  switch (name) {
-    case 'видео': {
+  switch (type) {
+    case 'Видео': {
       return (
         <div className={`${styles.type} ${styles.type_white}`}>
           <img width={18} height={18} src={VideoImage} alt='Иконка' />
-          <span className={styles.type__text}>{name}</span>
+          <span className={styles.type__text}>{type}</span>
         </div>
       );
     }
@@ -36,7 +36,7 @@ const Type = ({ id, text }: Props) => {
       return (
         <div className={styles.type}>
           <img width={22} height={16} src={CourseImage} alt='Иконка' />
-          <span className={styles.type__text}>{name}</span>
+          <span className={styles.type__text}>{type}</span>
         </div>
       );
     }
@@ -44,7 +44,7 @@ const Type = ({ id, text }: Props) => {
       return (
         <div className={styles.type}>
           <img width={18} height={18} src={TreningImage} alt='Иконка' />
-          <span className={styles.type__text}>{name}</span>
+          <span className={styles.type__text}>{type}</span>
         </div>
       );
     }
@@ -52,7 +52,7 @@ const Type = ({ id, text }: Props) => {
       return (
         <div className={styles.type}>
           <img width={18} height={18} src={TrenagerImage} alt='Иконка' />
-          <span className={styles.type__text}>{name}</span>
+          <span className={styles.type__text}>{type}</span>
         </div>
       );
     }
@@ -61,11 +61,11 @@ const Type = ({ id, text }: Props) => {
     case 'Документ':
     case 'Тест':
     case 'Инструкция': {
-      const srcImage = srcImages[name];
+      const srcImage = srcImages[type];
       return (
         <div className={`${styles.type} ${styles.type_dark}`}>
           <img width={18} height={18} src={srcImage} alt='Иконка' />
-          <span className={styles.type__text}>{name}</span>
+          <span className={styles.type__text}>{type}</span>
         </div>
       );
     }
@@ -75,4 +75,4 @@ const Type = ({ id, text }: Props) => {
   }
 };
 
-export default Type;
+export default CardType;

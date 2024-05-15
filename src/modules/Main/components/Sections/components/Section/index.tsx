@@ -13,7 +13,7 @@ const Section = ({ data }: Props) => {
   return (
     <div className={styles.wrapper}>
       {data.map((item, index) => (
-        <Card key={index} />
+        <Card key={index} data={item} />
       ))}
     </div>
   );

@@ -8,7 +8,7 @@
   | 'Документ'
   | 'Тест'
   | 'Инструкция';
-export type Status = 'новый' | 'в процессе' | 'завершено';
+export type Status = 'новый' | 'в процессе' | 'завершено' | '';
 export type Category = 'material' | 'hiring' | 'selection';
 export type Role = 'manager' | 'hr_bp' | 'recruiter' | 'guest';
 export type Tags = string[];
@@ -22,13 +22,8 @@ export interface IDataItem {
   category: Category;
   role: Role;
   image: string;
-  tags: string[];
+  tags: Tags;
 }
-
-// export interface IDataSection {
-//   data: IDataItem[];
-//   tags: Tags;
-// }
 
 export interface IResponseItem {
   dataProcess: IDataItem[];
