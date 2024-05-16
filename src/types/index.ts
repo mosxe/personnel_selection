@@ -23,6 +23,7 @@ export interface IDataItem {
   role: Role;
   image: string;
   tags: Tags;
+  link: string;
 }
 
 export interface IResponseItem {

@@ -1,5 +1,4 @@
-﻿import HeaderImage from 'components/Header';
-import Loader from 'components/Loader';
+﻿import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Header from './components/Header';
 import Sections from './components/Sections';
@@ -12,13 +11,10 @@ const Main = () => {
 
   if (isLoading) {
     return (
-      <>
-        <HeaderImage />
-        <main className={styles.main}>
-          <Header />
-          <Loader />
-        </main>
-      </>
+      <main className={styles.main}>
+        <Header />
+        <Loader />
+      </main>
     );
   }
 
@@ -28,28 +24,22 @@ const Main = () => {
 
   if (data.role === 'guest') {
     return (
-      <>
-        <HeaderImage />
-        <main className={styles.main}>
-          <Header />
-          <div>Недостаточно прав доступа!</div>
-        </main>
-      </>
+      <main className={styles.main}>
+        <Header />
+        <div>Недостаточно прав доступа!</div>
+      </main>
     );
   }
   return (
-    <>
-      <HeaderImage />
-      <main className={styles.main}>
-        <Header />
-        <Sections
-          role={data.role}
-          dataManager={data.dataManager}
-          dataHRBP={data.dataHRBP}
-          dataRecruiter={data.dataRecruiter}
-        />
-      </main>
-    </>
+    <main className={styles.main}>
+      <Header />
+      <Sections
+        role={data.role}
+        dataManager={data.dataManager}
+        dataHRBP={data.dataHRBP}
+        dataRecruiter={data.dataRecruiter}
+      />
+    </main>
   );
 };
 
