@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import MainPage from 'pages/Main';
+import MaterialPage from 'pages/Material';
 import ErrorPage from 'pages/Error';
 import { store } from 'store/store';
 import Error from 'components/Error';
@@ -14,11 +15,11 @@ const router = createBrowserRouter([
     element: <MainPage />,
     errorElement: <Error />
   },
-  // {
-  //   path: '/financial_consciousness/:id',
-  //   element: <Course />
-  //   // errorElement: <Error />
-  // },
+  {
+    path: '/personnel_selection/:id',
+    element: <MaterialPage />,
+    errorElement: <Error />
+  },
   {
     path: '*',
     element: <ErrorPage />

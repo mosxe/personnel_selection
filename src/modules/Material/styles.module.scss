@@ -1,0 +1,140 @@
+﻿.material {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+
+  &__video {
+    flex-basis: 66.666667%;
+    height: 100%;
+    max-width: 66.666667%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid var(--page-color-gray);
+    font-weight: 400;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  &__wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--page-color-black);
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    color: rgba(135, 138, 142, 1);
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--page-color-dark-gray);
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 10;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &__play {
+    position: absolute;
+    z-index: 20;
+    cursor: pointer;
+
+    & circle,
+    & path {
+      transition: all 0.3s;
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & video {
+      max-height: 600px;
+      width: 100%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      cursor: pointer;
+    }
+
+    &:hover .material__play circle {
+      fill: rgba(208, 212, 217, 1);
+    }
+
+    &:active .material__play {
+      & circle {
+        fill: rgba(208, 212, 217, 1);
+      }
+
+      & path {
+        fill: rgba(228, 25, 16, 1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .material {
+    flex-direction: column;
+    gap: 0px;
+
+    &__video {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+
+  .material__header {
+    padding: 0px 0px 10px 0px;
+    border: none;
+  }
+
+  .material__subtitle {
+    font-size: 14px;
+  }
+
+  .material__video video {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .material__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

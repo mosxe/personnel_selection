@@ -41,3 +41,27 @@ export interface IResponseData {
   isError: boolean;
   errorMessage: string;
 }
+
+export interface File {
+  name: string;
+  link: string;
+  type: Type;
+}
+
+export interface IMaterial {
+  id: string;
+  type: Type;
+  title: string;
+  desc: string;
+  content: string;
+  speakers: string;
+  image: string;
+  link: string;
+  files: File[];
+}
+
+export interface IResponseMaterial {
+  data: IMaterial;
+  isError: boolean;
+  errorMessage: string;
+}

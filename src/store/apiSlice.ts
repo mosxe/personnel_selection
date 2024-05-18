@@ -1,5 +1,11 @@
 ﻿import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IDataItem, IResponseData, Role } from 'types';
+import {
+  IDataItem,
+  IResponseData,
+  IResponseMaterial,
+  IMaterial,
+  Role
+} from 'types';
 import mockData from './mockData.json';
 const baseURL = window.location.origin;
 const API_URL = import.meta.env.DEV
@@ -27,25 +33,29 @@ export const API = createApi({
         if (import.meta.env.DEV) {
           const mockDataResponse: IResponseData = {
             dataManager: {
-              dataProcess: mockData.dataManager.dataProcess as IDataItem[],
-              dataWorking: mockData.dataManager.dataWorking as IDataItem[],
-              dataInterview: mockData.dataManager.dataInterview as IDataItem[],
-              tags: mockData.dataManager.tags
+              dataProcess: mockData.data.dataManager.dataProcess as IDataItem[],
+              dataWorking: mockData.data.dataManager.dataWorking as IDataItem[],
+              dataInterview: mockData.data.dataManager
+                .dataInterview as IDataItem[],
+              tags: mockData.data.dataManager.tags
             },
             dataHRBP: {
-              dataProcess: mockData.dataHRBP.dataProcess as IDataItem[],
-              dataWorking: mockData.dataHRBP.dataWorking as IDataItem[],
-              dataInterview: mockData.dataHRBP.dataInterview as IDataItem[],
-              tags: mockData.dataHRBP.tags
+              dataProcess: mockData.data.dataHRBP.dataProcess as IDataItem[],
+              dataWorking: mockData.data.dataHRBP.dataWorking as IDataItem[],
+              dataInterview: mockData.data.dataHRBP
+                .dataInterview as IDataItem[],
+              tags: mockData.data.dataHRBP.tags
             },
             dataRecruiter: {
-              dataProcess: mockData.dataRecruiter.dataProcess as IDataItem[],
-              dataWorking: mockData.dataRecruiter.dataWorking as IDataItem[],
-              dataInterview: mockData.dataRecruiter
+              dataProcess: mockData.data.dataRecruiter
+                .dataProcess as IDataItem[],
+              dataWorking: mockData.data.dataRecruiter
+                .dataWorking as IDataItem[],
+              dataInterview: mockData.data.dataRecruiter
                 .dataInterview as IDataItem[],
-              tags: mockData.dataRecruiter.tags
+              tags: mockData.data.dataRecruiter.tags
             },
-            role: mockData.role as Role,
+            role: mockData.data.role as Role,
             isError: false,
             errorMessage: ''
           };
@@ -56,68 +66,43 @@ export const API = createApi({
           return response;
         }
       }
+    }),
+    getMaterial: builder.query<IResponseMaterial, string | undefined>({
+      query: (id) =>
+        urlBuilder({
+          action: 'getMaterial',
+          id: id
+        }),
+      transformResponse: (response: IResponseMaterial) => {
+        if (import.meta.env.DEV) {
+          const mockDataResponse: IResponseMaterial = {
+            data: mockData.material.data as IMaterial,
+            isError: false,
+            errorMessage: ''
+          };
+          return new Promise((resolve) => {
+            return setTimeout(() => resolve(mockDataResponse), 1500);
+          });
+        } else {
+          return response;
+        }
+      }
+    }),
+    updateStatusMaterial: builder.query<void, string>({
+      query: (id) => ({
+        url: API_URL + '&action=updateStatusMaterial',
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id
+        })
+      })
     })
-    // sendMessage: builder.query<any, ISendMessage>({
-    //   query: ({ id, module_id, lesson_id, text }) => ({
-    //     url: API_URL + '&action=sendMessage',
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({
-    //       id,
-    //       module_id,
-    //       lesson_id,
-    //       text
-    //     })
-    //   })
-    // }),
-    // updateStatusLesson: builder.query<any, IUpdateStatusLesson>({
-    //   query: ({ education_plan_id, lesson_id }) => ({
-    //     url: API_URL + '&action=updateStatusLesson',
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({
-    //       education_plan_id: education_plan_id,
-    //       lesson_id: lesson_id
-    //     })
-    //   })
-    // }),
-    // activeCourse: builder.query<IActiveCourseResponse, void>({
-    //   query: () => ({
-    //     url: import.meta.env.DEV
-    //       ? 'https://dummyjson.com/products/add'
-    //       : API_URL + '&action=activeCourse',
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' }
-    //   }),
-    //   transformResponse: (response: IActiveCourseResponse) => {
-    //     if (import.meta.env.DEV) {
-    //       return {
-    //         id: '1234567890',
-    //         isError: false,
-    //         errorMessage: ''
-    //       };
-    //     } else {
-    //       return response;
-    //     }
-    //   }
-    // }),
-    // activeAssessment: builder.query<
-    //   IActiveAssessmentResponse,
-    //   IUpdateStatusLesson
-    // >({
-    //   query: ({ education_plan_id, lesson_id }) => ({
-    //     url: import.meta.env.DEV
-    //       ? 'https://dummyjson.com/products/add'
-    //       : API_URL + '&action=activeAssessment',
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({
-    //       education_plan_id: education_plan_id,
-    //       lesson_id: lesson_id
-    //     })
-    //   })
-    // })
   })
 });
 
-export const { useGetDataQuery } = API;
+export const {
+  useGetDataQuery,
+  useGetMaterialQuery,
+  useLazyUpdateStatusMaterialQuery
+} = API;

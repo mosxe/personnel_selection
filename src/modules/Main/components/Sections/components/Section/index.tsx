@@ -14,7 +14,7 @@ const Section = ({ data }: Props) => {
     data.length > COUNT_CARDS && !isShowAll ? data.slice(0, COUNT_CARDS) : data;
 
   if (!data.length) {
-    return <div>Материалы отсутствуют</div>;
+    return <div className={styles['no-data']}>Материалы отсутствуют</div>;
   }
 
   return (

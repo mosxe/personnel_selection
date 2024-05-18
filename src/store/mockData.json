@@ -1,536 +1,564 @@
 ﻿{
-  "dataManager": {
-    "dataProcess": [
-      {
-        "id": 1,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 ",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "material",
-        "role": "hr_bp",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": [],
-        "link": "https://static.vecteezy.com/system/resources/previews/003/213/023/mp4/sunrise-and-sunset-timelapse-high-definition-footage-on-golden-hour-free-video.mp4"
-      },
-      {
-        "id": 2,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение 2",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "завершено",
-        "category": "material",
-        "role": "hr_bp",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": ["Видео"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение 3",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "material",
-        "role": "manager",
-        "image": "",
-        "tags": ["Тренинг", "Инструкция"],
-        "link": ""
-      }
-    ],
-    "dataWorking": [
-      {
-        "id": 1,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение ",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "hiring",
-        "role": "manager",
-        "image": "",
-        "tags": ["Видео", "Интервью"],
-        "link": ""
-      },
-      {
-        "id": 2,
-        "type": "Тренажёр",
-        "title": "Тренажёр Звездное небо",
-        "desc": "электронный курс по проведению интервью",
-        "status": "новый",
-        "category": "material",
-        "role": "manager",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": ["Тренажёр"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Памятка",
-        "title": "Памятка по работе с системой",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": ["Памятка"],
-        "link": ""
-      },
-      {
-        "id": 4,
-        "type": "Тренинг",
-        "title": "Секреты успешного найма",
-        "desc": "тренинг",
-        "status": "новый",
-        "category": "hiring",
-        "role": "recruiter",
-        "image": "",
-        "tags": ["Тренинг"],
-        "link": ""
-      }
-    ],
-    "dataInterview": [
-      {
-        "id": 1,
-        "type": "Шаблон",
-        "title": "Памятка по проведению интервью",
-        "desc": "материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания",
-        "status": "",
-        "category": "hiring",
-        "role": "recruiter",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": ["Шаблон"],
-        "link": ""
-      },
-      {
-        "id": 2,
-        "type": "Документ",
-        "title": "Процесс подроба",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "material",
-        "role": "manager",
-        "image": "",
-        "tags": ["Документ"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Тест",
-        "title": "Тест по работе с системе Поток",
-        "desc": "интерактивный тест",
-        "status": "новый",
-        "category": "selection",
-        "role": "manager",
-        "image": "",
-        "tags": ["Тест"],
-        "link": ""
-      },
-      {
-        "id": 4,
-        "type": "Инструкция",
-        "title": "Инструкция секреты успешного найма",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "hiring",
-        "role": "manager",
-        "image": "",
-        "tags": ["Инструкция"],
-        "link": ""
-      },
-      {
-        "id": 5,
-        "type": "Электронный курс",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      },
-      {
-        "id": 6,
-        "type": "Электронный курс 33",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      },
-      {
-        "id": 7,
-        "type": "Электронный курс 55",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      },
-      {
-        "id": 8,
-        "type": "Электронный курс 33",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      },
-      {
-        "id": 9,
-        "type": "Электронный курс 55",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      },
-      {
-        "id": 10,
-        "type": "Электронный курс 33",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      },
-      {
-        "id": 11,
-        "type": "Электронный курс 55",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      }
-    ],
-    "tags": ["Шаблон", "Документ", "Тест", "Инструкция"]
+  "data": {
+    "dataManager": {
+      "dataProcess": [
+        {
+          "id": 1,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 Подбор персонала в ОМК. Введение 1 ",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "material",
+          "role": "hr_bp",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": [],
+          "link": "https://static.vecteezy.com/system/resources/previews/003/213/023/mp4/sunrise-and-sunset-timelapse-high-definition-footage-on-golden-hour-free-video.mp4"
+        },
+        {
+          "id": 2,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение 2",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "завершено",
+          "category": "material",
+          "role": "hr_bp",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": ["Видео"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение 3",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "material",
+          "role": "manager",
+          "image": "",
+          "tags": ["Тренинг", "Инструкция"],
+          "link": ""
+        }
+      ],
+      "dataWorking": [
+        {
+          "id": 1,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение Подбор персонала в ОМК. Введение ",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "hiring",
+          "role": "manager",
+          "image": "",
+          "tags": ["Видео", "Интервью"],
+          "link": ""
+        },
+        {
+          "id": 2,
+          "type": "Тренажёр",
+          "title": "Тренажёр Звездное небо",
+          "desc": "электронный курс по проведению интервью",
+          "status": "новый",
+          "category": "material",
+          "role": "manager",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": ["Тренажёр"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Памятка",
+          "title": "Памятка по работе с системой",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": ["Памятка"],
+          "link": ""
+        },
+        {
+          "id": 4,
+          "type": "Тренинг",
+          "title": "Секреты успешного найма",
+          "desc": "тренинг",
+          "status": "новый",
+          "category": "hiring",
+          "role": "recruiter",
+          "image": "",
+          "tags": ["Тренинг"],
+          "link": ""
+        }
+      ],
+      "dataInterview": [
+        {
+          "id": 1,
+          "type": "Шаблон",
+          "title": "Памятка по проведению интервью",
+          "desc": "материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания материал для скачивания",
+          "status": "",
+          "category": "hiring",
+          "role": "recruiter",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": ["Шаблон"],
+          "link": ""
+        },
+        {
+          "id": 2,
+          "type": "Документ",
+          "title": "Процесс подроба",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "material",
+          "role": "manager",
+          "image": "",
+          "tags": ["Документ"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Тест",
+          "title": "Тест по работе с системе Поток",
+          "desc": "интерактивный тест",
+          "status": "новый",
+          "category": "selection",
+          "role": "manager",
+          "image": "",
+          "tags": ["Тест"],
+          "link": ""
+        },
+        {
+          "id": 4,
+          "type": "Инструкция",
+          "title": "Инструкция секреты успешного найма",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "hiring",
+          "role": "manager",
+          "image": "",
+          "tags": ["Инструкция"],
+          "link": ""
+        },
+        {
+          "id": 5,
+          "type": "Электронный курс",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        },
+        {
+          "id": 6,
+          "type": "Электронный курс 33",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        },
+        {
+          "id": 7,
+          "type": "Электронный курс 55",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        },
+        {
+          "id": 8,
+          "type": "Электронный курс 33",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        },
+        {
+          "id": 9,
+          "type": "Электронный курс 55",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        },
+        {
+          "id": 10,
+          "type": "Электронный курс 33",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        },
+        {
+          "id": 11,
+          "type": "Электронный курс 55",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        }
+      ],
+      "tags": ["Шаблон", "Документ", "Тест", "Инструкция"]
+    },
+    "dataHRBP": {
+      "dataProcess": [
+        {
+          "id": 1,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "material",
+          "role": "hr_bp",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": [],
+          "link": ""
+        },
+        {
+          "id": 2,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "material",
+          "role": "hr_bp",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": ["Видео"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "material",
+          "role": "manager",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": ["Тренинг", "Инструкция"],
+          "link": ""
+        }
+      ],
+      "dataWorking": [
+        {
+          "id": 1,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "hiring",
+          "role": "manager",
+          "image": "",
+          "tags": ["Видео", "Интервью"],
+          "link": ""
+        },
+        {
+          "id": 2,
+          "type": "Тренажёр",
+          "title": "Тренажёр Звездное небо",
+          "desc": "электронный курс по проведению интервью",
+          "status": "новый",
+          "category": "material",
+          "role": "manager",
+          "image": "",
+          "tags": ["Тренажёр"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Памятка",
+          "title": "Памятка по работе с системой",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": ["Памятка"],
+          "link": ""
+        },
+        {
+          "id": 4,
+          "type": "Тренинг",
+          "title": "Секреты успешного найма",
+          "desc": "тренинг",
+          "status": "новый",
+          "category": "hiring",
+          "role": "recruiter",
+          "image": "",
+          "tags": ["Тренинг"],
+          "link": ""
+        }
+      ],
+      "dataInterview": [
+        {
+          "id": 1,
+          "type": "Шаблон",
+          "title": "Памятка по проведению интервью",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "hiring",
+          "role": "recruiter",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": ["Шаблон"],
+          "link": ""
+        },
+        {
+          "id": 2,
+          "type": "Документ",
+          "title": "Процесс подроба",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "material",
+          "role": "manager",
+          "image": "",
+          "tags": ["Документ"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Тест",
+          "title": "Тест по работе с системе Поток",
+          "desc": "интерактивный тест",
+          "status": "новый",
+          "category": "selection",
+          "role": "manager",
+          "image": "",
+          "tags": ["Тест"],
+          "link": ""
+        },
+        {
+          "id": 4,
+          "type": "Инструкция",
+          "title": "Инструкция секреты успешного найма",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "hiring",
+          "role": "manager",
+          "image": "",
+          "tags": ["Инструкция"],
+          "link": ""
+        },
+        {
+          "id": 5,
+          "type": "Электронный курс",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        }
+      ],
+      "tags": ["Шаблон", "Документ", "Тест"]
+    },
+    "dataRecruiter": {
+      "dataProcess": [
+        {
+          "id": 1,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "material",
+          "role": "hr_bp",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": [],
+          "link": ""
+        },
+        {
+          "id": 2,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "material",
+          "role": "hr_bp",
+          "image": "",
+          "tags": ["Видео"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "material",
+          "role": "manager",
+          "image": "",
+          "tags": ["Тренинг", "Инструкция"],
+          "link": ""
+        }
+      ],
+      "dataWorking": [
+        {
+          "id": 1,
+          "type": "Видео",
+          "title": "Подбор персонала в ОМК. Введение",
+          "desc": "вводная информация о подборе персонала в компании",
+          "status": "в процессе",
+          "category": "hiring",
+          "role": "manager",
+          "image": "",
+          "tags": ["Видео", "Интервью"],
+          "link": ""
+        },
+        {
+          "id": 2,
+          "type": "Тренажёр",
+          "title": "Тренажёр Звездное небо",
+          "desc": "электронный курс по проведению интервью",
+          "status": "новый",
+          "category": "material",
+          "role": "manager",
+          "image": "",
+          "tags": ["Тренажёр"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Памятка",
+          "title": "Памятка по работе с системой",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": ["Памятка"],
+          "link": ""
+        },
+        {
+          "id": 4,
+          "type": "Тренинг",
+          "title": "Секреты успешного найма",
+          "desc": "тренинг",
+          "status": "новый",
+          "category": "hiring",
+          "role": "recruiter",
+          "image": "",
+          "tags": ["Тренинг"],
+          "link": ""
+        }
+      ],
+      "dataInterview": [
+        {
+          "id": 1,
+          "type": "Шаблон",
+          "title": "Памятка по проведению интервью",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "hiring",
+          "role": "recruiter",
+          "image": "",
+          "tags": ["Шаблон"],
+          "link": ""
+        },
+        {
+          "id": 2,
+          "type": "Документ",
+          "title": "Процесс подроба",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "material",
+          "role": "manager",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": ["Документ"],
+          "link": ""
+        },
+        {
+          "id": 3,
+          "type": "Тест",
+          "title": "Тест по работе с системе Поток",
+          "desc": "интерактивный тест",
+          "status": "новый",
+          "category": "selection",
+          "role": "manager",
+          "image": "",
+          "tags": ["Тест"],
+          "link": ""
+        },
+        {
+          "id": 4,
+          "type": "Инструкция",
+          "title": "Инструкция секреты успешного найма ",
+          "desc": "материал для скачивания",
+          "status": "",
+          "category": "hiring",
+          "role": "manager",
+          "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+          "tags": ["Инструкция"],
+          "link": ""
+        },
+        {
+          "id": 5,
+          "type": "Электронный курс",
+          "title": "Электронный курс секреты успешного найма",
+          "desc": "курс",
+          "status": "завершено",
+          "category": "selection",
+          "role": "hr_bp",
+          "image": "",
+          "tags": [],
+          "link": ""
+        }
+      ],
+      "tags": ["Шаблон", "Документ", "Тест", "Инструкция", "Электронный курс"]
+    },
+    "role": "hr_bp",
+    "isError": false,
+    "errorMessage": ""
   },
-  "dataHRBP": {
-    "dataProcess": [
-      {
-        "id": 1,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "material",
-        "role": "hr_bp",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": [],
-        "link": ""
-      },
-      {
-        "id": 2,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "material",
-        "role": "hr_bp",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": ["Видео"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "material",
-        "role": "manager",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": ["Тренинг", "Инструкция"],
-        "link": ""
-      }
-    ],
-    "dataWorking": [
-      {
-        "id": 1,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "hiring",
-        "role": "manager",
-        "image": "",
-        "tags": ["Видео", "Интервью"],
-        "link": ""
-      },
-      {
-        "id": 2,
-        "type": "Тренажёр",
-        "title": "Тренажёр Звездное небо",
-        "desc": "электронный курс по проведению интервью",
-        "status": "новый",
-        "category": "material",
-        "role": "manager",
-        "image": "",
-        "tags": ["Тренажёр"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Памятка",
-        "title": "Памятка по работе с системой",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": ["Памятка"],
-        "link": ""
-      },
-      {
-        "id": 4,
-        "type": "Тренинг",
-        "title": "Секреты успешного найма",
-        "desc": "тренинг",
-        "status": "новый",
-        "category": "hiring",
-        "role": "recruiter",
-        "image": "",
-        "tags": ["Тренинг"],
-        "link": ""
-      }
-    ],
-    "dataInterview": [
-      {
-        "id": 1,
-        "type": "Шаблон",
-        "title": "Памятка по проведению интервью",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "hiring",
-        "role": "recruiter",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": ["Шаблон"],
-        "link": ""
-      },
-      {
-        "id": 2,
-        "type": "Документ",
-        "title": "Процесс подроба",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "material",
-        "role": "manager",
-        "image": "",
-        "tags": ["Документ"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Тест",
-        "title": "Тест по работе с системе Поток",
-        "desc": "интерактивный тест",
-        "status": "новый",
-        "category": "selection",
-        "role": "manager",
-        "image": "",
-        "tags": ["Тест"],
-        "link": ""
-      },
-      {
-        "id": 4,
-        "type": "Инструкция",
-        "title": "Инструкция секреты успешного найма",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "hiring",
-        "role": "manager",
-        "image": "",
-        "tags": ["Инструкция"],
-        "link": ""
-      },
-      {
-        "id": 5,
-        "type": "Электронный курс",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      }
-    ],
-    "tags": ["Шаблон", "Документ", "Тест"]
-  },
-  "dataRecruiter": {
-    "dataProcess": [
-      {
-        "id": 1,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "material",
-        "role": "hr_bp",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": [],
-        "link": ""
-      },
-      {
-        "id": 2,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "material",
-        "role": "hr_bp",
-        "image": "",
-        "tags": ["Видео"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "material",
-        "role": "manager",
-        "image": "",
-        "tags": ["Тренинг", "Инструкция"],
-        "link": ""
-      }
-    ],
-    "dataWorking": [
-      {
-        "id": 1,
-        "type": "Видео",
-        "title": "Подбор персонала в ОМК. Введение",
-        "desc": "вводная информация о подборе персонала в компании",
-        "status": "в процессе",
-        "category": "hiring",
-        "role": "manager",
-        "image": "",
-        "tags": ["Видео", "Интервью"],
-        "link": ""
-      },
-      {
-        "id": 2,
-        "type": "Тренажёр",
-        "title": "Тренажёр Звездное небо",
-        "desc": "электронный курс по проведению интервью",
-        "status": "новый",
-        "category": "material",
-        "role": "manager",
-        "image": "",
-        "tags": ["Тренажёр"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Памятка",
-        "title": "Памятка по работе с системой",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": ["Памятка"],
-        "link": ""
-      },
-      {
-        "id": 4,
-        "type": "Тренинг",
-        "title": "Секреты успешного найма",
-        "desc": "тренинг",
-        "status": "новый",
-        "category": "hiring",
-        "role": "recruiter",
-        "image": "",
-        "tags": ["Тренинг"],
-        "link": ""
-      }
-    ],
-    "dataInterview": [
-      {
-        "id": 1,
-        "type": "Шаблон",
-        "title": "Памятка по проведению интервью",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "hiring",
-        "role": "recruiter",
-        "image": "",
-        "tags": ["Шаблон"],
-        "link": ""
-      },
-      {
-        "id": 2,
-        "type": "Документ",
-        "title": "Процесс подроба",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "material",
-        "role": "manager",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": ["Документ"],
-        "link": ""
-      },
-      {
-        "id": 3,
-        "type": "Тест",
-        "title": "Тест по работе с системе Поток",
-        "desc": "интерактивный тест",
-        "status": "новый",
-        "category": "selection",
-        "role": "manager",
-        "image": "",
-        "tags": ["Тест"],
-        "link": ""
-      },
-      {
-        "id": 4,
-        "type": "Инструкция",
-        "title": "Инструкция секреты успешного найма ",
-        "desc": "материал для скачивания",
-        "status": "",
-        "category": "hiring",
-        "role": "manager",
-        "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
-        "tags": ["Инструкция"],
-        "link": ""
-      },
-      {
-        "id": 5,
-        "type": "Электронный курс",
-        "title": "Электронный курс секреты успешного найма",
-        "desc": "курс",
-        "status": "завершено",
-        "category": "selection",
-        "role": "hr_bp",
-        "image": "",
-        "tags": [],
-        "link": ""
-      }
-    ],
-    "tags": ["Шаблон", "Документ", "Тест", "Инструкция", "Электронный курс"]
-  },
-  "role": "hr_bp",
-  "isError": false,
-  "errorMessage": ""
+  "material": {
+    "data": {
+      "id": "1231231313",
+      "type": "Видео",
+      "title": "Подбор персонала в ОМК. Введение",
+      "desc": "Вводная информация о подборе персонала в компании",
+      "content": "Как устроен процесс найма персонала в компании? Почему важно знать как искать сотрудников и проводить собеседования? Ответим на эти вопросы в коротком видео.",
+      "speakers": "Валентина Черных, Валентина Черных, Валентина Черных",
+      "image": "https://s3-alpha-sig.figma.com/img/285e/249e/2b14b88e5f5c894bdbfa408a43775110?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f05vYSQME~Oqas-qnIS5L1tFPRckLDwWHNCVKbKUCXtvb9xGRgftfHgJE08dr7Jw5KBqNR7UuXPUHJRDEvTcjBS8SEJ4DdmZXz37d2f6CplNGZQtYWpsHxTkw4dQ7XV2FkCyZCWxSmKgRuuoIQe9ibaCKarG2vgh2Y1ZZpz9aSHbuitaVGe9OL9kVhPXNV2KV7zUkMcDAayWNvubRK614BcMgSGOUa8x1pYamihC00zdi9QDg~Ihn1vDsvZyQdzcgSfczFy01331SXw7sAPy7u~Hyz3u7sRWGWtE1EY2f4A5hwQGVgkoYBtcd8AurE56eadXYj5oF0FRxQ5lfp98qw__",
+      "link": "",
+      "files": [
+        {
+          "name": "Подбор персонала.Введение/видеоролик.mp4",
+          "type": "Видео",
+          "link": "какой-то линк"
+        },
+        {
+          "name": "Памятка по подбору персонала.pdf",
+          "type": "Документ",
+          "link": "какой-то линк"
+        }
+      ]
+    },
+    "isError": false,
+    "errorMessage": ""
+  }
 }

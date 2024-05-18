@@ -1,4 +1,5 @@
 ﻿import { useState, useRef } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Modal, { ButtonClose } from 'components/Modal';
 import classNames from 'classnames';
 import Type from './components/Type';
@@ -14,9 +15,10 @@ type Props = {
 const Card = ({ data }: Props) => {
   const [isShowModal, setShowModal] = useState<boolean>(false);
   const [time, setTime] = useState<string>('10:10:10');
+  const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
   const isStartPlaying = useRef<boolean>(false);
-  const { title, desc, status, category, type, image, link } = data;
+  const { id, title, desc, status, category, type, image, link } = data;
 
   const classNameCard = classNames(styles.card, {
     [styles.card_red]: category === 'material',
@@ -35,7 +37,8 @@ const Card = ({ data }: Props) => {
   const handleClick = () => {
     switch (type) {
       case 'Видео':
-        setShowModal(!isShowModal);
+        navigate(`/personnel_selection/${id}`);
+        // setShowModal(!isShowModal);
         break;
       case 'Электронный курс':
         break;
@@ -49,39 +52,39 @@ const Card = ({ data }: Props) => {
     setShowModal(!isShowModal);
   };
 
-  const formatedTime = (event: any) => {
-    try {
-      let hoursString = '';
-      let minutesString = '';
-      let secondsString = '';
-      const duration = event.target.duration;
-      if (!isNaN(duration)) {
-        const hours = Math.floor(duration / 3600);
-        const minutes = Math.floor((duration % 3600) / 60);
-        const seconds = Math.floor((duration % 3600) % 60);
+  // const formatedTime = (event: any) => {
+  //   try {
+  //     let hoursString = '';
+  //     let minutesString = '';
+  //     let secondsString = '';
+  //     const duration = event.target.duration;
+  //     if (!isNaN(duration)) {
+  //       const hours = Math.floor(duration / 3600);
+  //       const minutes = Math.floor((duration % 3600) / 60);
+  //       const seconds = Math.floor((duration % 3600) % 60);
 
-        hoursString = hours < 10 ? '0' + hours : String(hours);
-        minutesString = minutes < 10 ? '0' + minutes : String(minutes);
-        secondsString = seconds < 10 ? '0' + seconds : String(seconds);
+  //       hoursString = hours < 10 ? '0' + hours : String(hours);
+  //       minutesString = minutes < 10 ? '0' + minutes : String(minutes);
+  //       secondsString = seconds < 10 ? '0' + seconds : String(seconds);
 
-        setTime(`${hoursString}:${minutesString}:${secondsString}`);
-      }
-    } catch (e) {}
-  };
+  //       setTime(`${hoursString}:${minutesString}:${secondsString}`);
+  //     }
+  //   } catch (e) {}
+  // };
 
-  const onViewVideo = async () => {
-    if (
-      (status === 'в процессе' || status === 'новый') &&
-      !isStartPlaying.current
-    ) {
-      // isStartPlaying.current = true;
-      // await updateStatus({
-      //   education_plan_id: id,
-      //   lesson_id: lesson_id
-      // });
-      // await updateData(id);
-    }
-  };
+  // const onViewVideo = async () => {
+  //   if (
+  //     (status === 'в процессе' || status === 'новый') &&
+  //     !isStartPlaying.current
+  //   ) {
+  //     // isStartPlaying.current = true;
+  //     // await updateStatus({
+  //     //   education_plan_id: id,
+  //     //   lesson_id: lesson_id
+  //     // });
+  //     // await updateData(id);
+  //   }
+  // };
 
   return (
     <>

@@ -18,7 +18,7 @@ const CardBackground = ({ type }: Props) => {
     case 'Тренажёр':
       return <div className={styles.card__background}>перейти к тренажёру</div>;
     default:
-      return <div className={styles.card__background}>скачать материал</div>;
+      return <div className={styles.card__background}>открыть материал</div>;
   }
 };
 
