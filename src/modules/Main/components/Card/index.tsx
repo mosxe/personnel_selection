@@ -1,11 +1,15 @@
-﻿import { useState, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import Modal, { ButtonClose } from 'components/Modal';
+﻿// import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+// import Modal, { ButtonClose } from 'components/Modal';
 import classNames from 'classnames';
 import Type from './components/Type';
 import Image from './components/Image';
 import Background from './components/Background';
 import { IDataItem } from 'types';
+import {
+  useLazyUpdateStatusMaterialQuery,
+  useLazyGetDataQuery
+} from 'store/apiSlice';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -13,11 +17,13 @@ type Props = {
 };
 
 const Card = ({ data }: Props) => {
-  const [isShowModal, setShowModal] = useState<boolean>(false);
-  const [time, setTime] = useState<string>('10:10:10');
+  const [updateStatus] = useLazyUpdateStatusMaterialQuery();
+  const [updateData] = useLazyGetDataQuery();
+  // const [isShowModal, setShowModal] = useState<boolean>(false);
+  // const [time, setTime] = useState<string>('10:10:10');
   const navigate = useNavigate();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const isStartPlaying = useRef<boolean>(false);
+  // const videoRef = useRef<HTMLVideoElement>(null);
+  // const isStartPlaying = useRef<boolean>(false);
   const { id, title, desc, status, category, type, image, link } = data;
 
   const classNameCard = classNames(styles.card, {
@@ -34,7 +40,7 @@ const Card = ({ data }: Props) => {
     [styles.card__status_passed]: status === 'завершено'
   });
 
-  const handleClick = () => {
+  const handleClick = async () => {
     switch (type) {
       case 'Видео':
         navigate(`/personnel_selection/${id}`);
@@ -43,14 +49,18 @@ const Card = ({ data }: Props) => {
       case 'Электронный курс':
         break;
       default:
-        window.open(link, '_blank');
+        if (link) {
+          window.open(link, '_blank');
+          await updateStatus(id);
+          await updateData();
+        }
         break;
     }
   };
 
-  const handleShowModal = () => {
-    setShowModal(!isShowModal);
-  };
+  // const handleShowModal = () => {
+  //   setShowModal(!isShowModal);
+  // };
 
   // const formatedTime = (event: any) => {
   //   try {
@@ -104,7 +114,7 @@ const Card = ({ data }: Props) => {
           <Background type={type} />
         </div>
       </article>
-      <Modal isShow={isShowModal} onClose={handleShowModal}>
+      {/* <Modal isShow={isShowModal} onClose={handleShowModal}>
         <Modal.Header>
           <div className={styles['card-modal-header']}>
             <div className={styles['card-modal-header__wrapper']}>
@@ -138,7 +148,7 @@ const Card = ({ data }: Props) => {
             <source src={link} />
           </video>
         </Modal.Body>
-      </Modal>
+      </Modal> */}
     </>
   );
 };

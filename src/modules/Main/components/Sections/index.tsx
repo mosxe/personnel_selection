@@ -1,6 +1,6 @@
 ﻿import { useState, useMemo } from 'react';
 import Filters from '../Filters';
-import Links from '../Links';
+// import Links from '../Links';
 import Title from './components/Title';
 import Section from './components/Section';
 import { Role, IResponseItem, Tags, IDataItem } from 'types';
@@ -155,9 +155,9 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
       case 'manager':
         return filteredData.isActive ? filteredData : dataManager;
       case 'recruiter':
-        return filteredData.isActive ? filteredData : dataHRBP;
-      case 'hr_bp':
         return filteredData.isActive ? filteredData : dataRecruiter;
+      case 'hr_bp':
+        return filteredData.isActive ? filteredData : dataHRBP;
       default:
         return filteredData;
     }
@@ -175,8 +175,8 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
         onShow={onShow}
         onClear={onClear}
       />
-      <Links />
-      <section className={styles.section}>
+      {/* <Links /> */}
+      <section className={styles.section} style={{ marginTop: '50px' }}>
         <Title
           title='Процесс подбора персонала в ОМК'
           image={ProcessImage}

@@ -1,13 +1,14 @@
 ﻿import { useRef, useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Description from './components/Description';
-import { IMaterial } from 'types';
 import {
   useGetMaterialQuery,
-  useLazyUpdateStatusMaterialQuery
+  useLazyUpdateStatusMaterialQuery,
+  useLazyGetDataQuery
 } from 'store/apiSlice';
+import classnames from 'classnames';
 import stylesMain from 'modules/Main/styles.module.scss';
 import styles from './styles.module.scss';
 
@@ -15,12 +16,13 @@ const Material = () => {
   const { id } = useParams();
   const { data, isLoading, isError } = useGetMaterialQuery(id);
   const [updateStatus] = useLazyUpdateStatusMaterialQuery();
+  const [updateData] = useLazyGetDataQuery();
   const videoRef = useRef<HTMLVideoElement>(null);
   const isStartPlaying = useRef<boolean>(false);
-  const [isShowImage, setShowImage] = useState<boolean>(true);
-  const [time, setTime] = useState<string>('asd ad ');
-  // const [updateStatus] = useLazyUpdateStatusLessonQuery();
-  // const [updateData] = useLazyGetDataQuery();
+  const [isShowIcon, setShowIcon] = useState<boolean>(true);
+  // const isShowIcon = useRef<boolean>(true);
+  // const [isShowImage, setShowImage] = useState<boolean>(true);
+  const [time, setTime] = useState<string>('');
 
   const formatedTime = (event: any) => {
     try {
@@ -39,38 +41,52 @@ const Material = () => {
 
         setTime(`${hoursString}:${minutesString}:${secondsString}`);
       }
-    } catch (e) {}
+    } catch (e) {
+      console.error('ERROR. Вычисление времени видео');
+    }
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    if (videoRef.current) {
-      videoRef.current.addEventListener('play', onViewVideo);
-      videoRef.current.addEventListener('loadedmetadata', formatedTime);
-    }
+    // if (videoRef.current) {
+    //   console.log(videoRef.current);
+    //   videoRef.current.addEventListener('play', onViewVideo, false);
+    //   videoRef.current.addEventListener('loadedmetadata', formatedTime);
+    // }
 
-    return () => {
-      if (videoRef.current) {
-        videoRef.current.pause();
-        videoRef.current.src = '';
-        videoRef.current.removeEventListener('play', onViewVideo);
-        videoRef.current.removeEventListener('loadedmetadata', formatedTime);
-      }
-    };
+    // return () => {
+    //   if (videoRef.current) {
+    //     videoRef.current.pause();
+    //     videoRef.current.src = '';
+    //     videoRef.current.removeEventListener('play', onViewVideo);
+    //     videoRef.current.removeEventListener('loadedmetadata', formatedTime);
+    //   }
+    // };
   }, []);
 
   const onViewVideo = async () => {
     console.log('clik video');
-    if (isShowImage) {
-      setShowImage(false);
-    }
-    if (status === '0' && !isStartPlaying.current && id !== undefined) {
+    setShowIcon(false);
+    // isShowIcon.current = false;
+    // if (isShowImage) {
+    //   setShowImage(false);
+    // }
+    if (
+      data?.data !== null &&
+      data?.data.status !== 'завершено' &&
+      !isStartPlaying.current &&
+      id !== undefined
+    ) {
       isStartPlaying.current = true;
       await updateStatus(id);
-      // await updateData(id);
+      await updateData();
     }
   };
+
+  const classNameIcon = classnames(styles.material__play, {
+    [styles.material__play_show]: isShowIcon
+  });
 
   if (isLoading) {
     return (
@@ -80,7 +96,13 @@ const Material = () => {
     );
   }
 
-  if (isError || data === undefined || id === undefined) {
+  if (
+    isError ||
+    data === undefined ||
+    id === undefined ||
+    data.isError ||
+    data.data === null
+  ) {
     return (
       <main className={stylesMain.main}>
         <Error message='Материал не найден. Обратитесь в техническую поддержку портала.' />
@@ -120,7 +142,21 @@ const Material = () => {
             )}
           </div>
           <div className={styles['material__container']}>
-            {data.data.image !== '' && isShowImage && (
+            <svg
+              className={classNameIcon}
+              width='80'
+              height='80'
+              viewBox='0 0 80 80'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <circle opacity='0.5' cx='40' cy='40' r='40' fill='#8D8E91' />
+              <path
+                d='M53.2778 37.4019C55.2778 38.5566 55.2778 41.4433 53.2778 42.598L35.6112 52.7979C33.6112 53.9526 31.1112 52.5092 31.1112 50.1998V29.8001C31.1112 27.4907 33.6112 26.0473 35.6112 27.202L53.2778 37.4019Z'
+                fill='white'
+              />
+            </svg>
+            {/* {data.data.image !== '' && isShowImage && (
               <>
                 <img
                   src={data.data.image}
@@ -142,9 +178,15 @@ const Material = () => {
                   />
                 </svg>
               </>
-            )}
-
-            <video controls ref={videoRef}>
+            )} */}
+            <video
+              controls
+              ref={videoRef}
+              // controlsList='nodownload'
+              onPlay={onViewVideo}
+              onPause={() => setShowIcon(true)}
+              onLoadedMetadata={formatedTime}
+            >
               <source src={data.data.link} />
             </video>
           </div>

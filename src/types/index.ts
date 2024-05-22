@@ -14,14 +14,14 @@ export type Role = 'manager' | 'hr_bp' | 'recruiter' | 'guest';
 export type Tags = string[];
 
 export interface IDataItem {
-  id: number;
+  id: string;
   type: Type;
   title: string;
   desc: string;
   status: Status;
   category: Category;
-  role: Role;
-  image: string;
+  // role: Role;
+  image: string | null;
   tags: Tags;
   link: string;
 }
@@ -50,18 +50,18 @@ export interface File {
 
 export interface IMaterial {
   id: string;
-  type: Type;
   title: string;
   desc: string;
   content: string;
   speakers: string;
-  image: string;
+  image: string | null;
+  status: Status;
   link: string;
   files: File[];
 }
 
 export interface IResponseMaterial {
-  data: IMaterial;
+  data: IMaterial | null;
   isError: boolean;
   errorMessage: string;
 }

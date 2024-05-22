@@ -11,7 +11,7 @@ const baseURL = window.location.origin;
 const API_URL = import.meta.env.DEV
   ? 'https://dummyjson.com/products'
   : baseURL +
-    '/custom_web_template.html?custom_web_template_id=7223406077446465954';
+    '/custom_web_template.html?custom_web_template_id=7029703095570822192';
 
 const urlBuilder = (params?: { [key: string]: any }) => {
   return {
@@ -103,6 +103,7 @@ export const API = createApi({
 
 export const {
   useGetDataQuery,
+  useLazyGetDataQuery,
   useGetMaterialQuery,
   useLazyUpdateStatusMaterialQuery
 } = API;

@@ -3,6 +3,7 @@
   gap: 20px;
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 50px;
 
   &__video {
     flex-basis: 66.666667%;
@@ -67,12 +68,18 @@
 
   &__play {
     position: absolute;
-    z-index: 20;
+    opacity: 0;
+    // z-index: 20;
     cursor: pointer;
+    transition: opacity 0.3s;
 
     & circle,
     & path {
       transition: all 0.3s;
+    }
+
+    &_show {
+      opacity: 1;
     }
   }
 

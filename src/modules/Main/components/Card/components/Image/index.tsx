@@ -10,7 +10,7 @@ import { Type } from 'types';
 import styles from '../../styles.module.scss';
 
 type Props = {
-  image: string;
+  image: string | null;
   type: Type;
 };
 
@@ -33,7 +33,7 @@ const Image = ({ image, type }: Props) => {
           <img src={srcImages[type]} alt='Иконка' />
         </div>
       )}
-      {image !== '' && <img src={image} alt='Обложка' />}
+      {image !== '' && image !== null && <img src={image} alt='Обложка' />}
       {type === 'Видео' && (
         <svg
           className={styles.card__img_background}
