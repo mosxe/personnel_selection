@@ -1,4 +1,5 @@
-﻿import Navs from './Navs';
+﻿import { useAppSelector } from 'store/hooks';
+import Navs from './Navs';
 import CheckBox from 'components/CheckBox';
 import { Role, Tags } from 'types';
 import styles from './styles.module.scss';
@@ -7,7 +8,6 @@ type Props = {
   role: Role;
   navRole: Role;
   tags: Tags;
-  selectedTags: Tags;
   onClickNav: (role: Role) => void;
   onChangeTag: (e: React.ChangeEvent<HTMLInputElement>, label: string) => void;
   onShow: () => void;
@@ -16,14 +16,17 @@ type Props = {
 
 const Filters = ({
   role,
-  navRole,
   tags,
-  selectedTags,
   onClickNav,
   onChangeTag,
   onShow,
   onClear
 }: Props) => {
+  const navRole = useAppSelector((state) => state.filters.nav);
+  const selectedTags = useAppSelector(
+    (state) => state.filters.selectedTags[navRole]
+  );
+
   return (
     <div className={styles.filters}>
       {(role === 'recruiter' || role === 'hr_bp') && (
