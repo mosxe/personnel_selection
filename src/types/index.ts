@@ -9,7 +9,10 @@
   | 'Тест'
   | 'Инструкция';
 export type Status = 'новый' | 'в процессе' | 'завершено' | '';
-export type Category = 'material' | 'hiring' | 'selection';
+export type Category =
+  | 'Общие вводные материалы'
+  | 'Найм рабочего персонала'
+  | 'Подбор РСС';
 export type Role = 'manager' | 'hr_bp' | 'recruiter' | 'guest';
 export type Tags = string[];
 

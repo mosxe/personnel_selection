@@ -19,9 +19,9 @@ const Card = ({ data }: Props) => {
   const [updateData] = useLazyGetDataQuery();
 
   const classNameCard = classNames(styles.card, {
-    [styles.card_red]: category === 'material',
-    [styles.card_blue]: category === 'hiring',
-    [styles.card_purple]: category === 'selection',
+    [styles.card_red]: category === 'Общие вводные материалы',
+    [styles.card_blue]: category === 'Найм рабочего персонала',
+    [styles.card_purple]: category === 'Подбор РСС',
     [styles.card_passed]: status === 'завершено' && type !== 'Видео',
     [styles.card_shadow]: type === 'Видео',
     [styles.card_hover]: type !== 'Видео'
