@@ -1,37 +1,49 @@
-﻿import Loader from 'components/Loader';
+﻿import { Main as MainLayout, Layout } from 'components/Layout';
+import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Header from './components/Header';
 import Sections from './components/Sections';
 import { useGetDataQuery } from 'store/apiSlice';
 import { initialState } from 'store/store';
-import styles from './styles.module.scss';
 
 const Main = () => {
   const { data = initialState, isLoading, isError } = useGetDataQuery();
 
   if (isLoading) {
     return (
-      <main className={styles.main}>
+      <MainLayout>
         <Header />
-        <Loader />
-      </main>
+        <Layout>
+          <Loader />
+        </Layout>
+      </MainLayout>
     );
   }
 
   if (isError || data.isError) {
-    return <Error />;
+    return (
+      <MainLayout>
+        <Header />
+        <Layout>
+          <Error />
+        </Layout>
+      </MainLayout>
+    );
   }
 
   if (data.role === 'guest') {
     return (
-      <main className={styles.main}>
+      <MainLayout>
         <Header />
-        <div>Недостаточно прав доступа!</div>
-      </main>
+        <Layout>
+          <Error message='Не достаточно прав доступа.' />
+        </Layout>
+      </MainLayout>
     );
   }
+
   return (
-    <main className={styles.main}>
+    <MainLayout>
       <Header />
       <Sections
         role={data.role}
@@ -39,7 +51,7 @@ const Main = () => {
         dataHRBP={data.dataHRBP}
         dataRecruiter={data.dataRecruiter}
       />
-    </main>
+    </MainLayout>
   );
 };
 

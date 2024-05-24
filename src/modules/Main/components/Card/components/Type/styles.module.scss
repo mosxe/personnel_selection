@@ -9,6 +9,11 @@
   border: 1px solid var(--page-color-white);
   background-color: rgba(223, 10, 119, 1);
 
+  & img {
+    width: 18px;
+    height: 18px;
+  }
+
   &__text {
     font-size: 12px;
     font-weight: 700;

@@ -62,6 +62,7 @@ export interface IMaterial {
 
 export interface IResponseMaterial {
   data: IMaterial | null;
+  role: Role;
   isError: boolean;
   errorMessage: string;
 }

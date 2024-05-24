@@ -77,6 +77,7 @@ export const API = createApi({
         if (import.meta.env.DEV) {
           const mockDataResponse: IResponseMaterial = {
             data: mockData.material.data as IMaterial,
+            role: mockData.material.role as Role,
             isError: false,
             errorMessage: ''
           };

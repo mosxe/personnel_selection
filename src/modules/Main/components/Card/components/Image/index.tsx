@@ -26,14 +26,17 @@ const Image = ({ image, type }: Props) => {
     Инструкция: InstructionImage
   };
 
+  const isShowIcon = image === '' && type !== 'Видео';
+  const isShowImage = image !== '' && image !== null;
+
   return (
     <>
-      {image === '' && type !== 'Видео' && (
+      {isShowIcon && (
         <div className={styles.card__img_circle}>
           <img src={srcImages[type]} alt='Иконка' />
         </div>
       )}
-      {image !== '' && image !== null && <img src={image} alt='Обложка' />}
+      {isShowImage && <img src={image} alt='Обложка' />}
       {type === 'Видео' && (
         <svg
           className={styles.card__img_background}

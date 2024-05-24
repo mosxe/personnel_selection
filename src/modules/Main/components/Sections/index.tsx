@@ -29,13 +29,6 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
   const filteredData = useAppSelector((state) => state.filters.filteredData);
 
   useEffect(() => {
-    // const selectedData =
-    //   role === 'manager'
-    //     ? dataManager
-    //     : role === 'hr_bp'
-    //     ? dataHRBP
-    //     : dataRecruiter;
-    // dispatch(updateNav(role));
     dispatch(filteringData({ data: dataManager, isActive: false }));
   }, []);
 

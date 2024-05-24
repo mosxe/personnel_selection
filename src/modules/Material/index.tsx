@@ -1,5 +1,6 @@
 ﻿import { useRef, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Main as MainLayout, Layout } from 'components/Layout';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Description from './components/Description';
@@ -9,7 +10,6 @@ import {
   useLazyGetDataQuery
 } from 'store/apiSlice';
 import classnames from 'classnames';
-import stylesMain from 'modules/Main/styles.module.scss';
 import styles from './styles.module.scss';
 
 const Material = () => {
@@ -20,8 +20,6 @@ const Material = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const isStartPlaying = useRef<boolean>(false);
   const [isShowIcon, setShowIcon] = useState<boolean>(true);
-  // const isShowIcon = useRef<boolean>(true);
-  // const [isShowImage, setShowImage] = useState<boolean>(true);
   const [time, setTime] = useState<string>('');
 
   const formatedTime = (event: any) => {
@@ -48,21 +46,6 @@ const Material = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    // if (videoRef.current) {
-    //   console.log(videoRef.current);
-    //   videoRef.current.addEventListener('play', onViewVideo, false);
-    //   videoRef.current.addEventListener('loadedmetadata', formatedTime);
-    // }
-
-    // return () => {
-    //   if (videoRef.current) {
-    //     videoRef.current.pause();
-    //     videoRef.current.src = '';
-    //     videoRef.current.removeEventListener('play', onViewVideo);
-    //     videoRef.current.removeEventListener('loadedmetadata', formatedTime);
-    //   }
-    // };
   }, []);
 
   const onViewVideo = async () => {
@@ -90,9 +73,11 @@ const Material = () => {
 
   if (isLoading) {
     return (
-      <main className={stylesMain.main}>
-        <Loader />
-      </main>
+      <MainLayout>
+        <Layout>
+          <Loader />
+        </Layout>
+      </MainLayout>
     );
   }
 
@@ -104,14 +89,26 @@ const Material = () => {
     data.data === null
   ) {
     return (
-      <main className={stylesMain.main}>
-        <Error message='Материал не найден. Обратитесь в техническую поддержку портала.' />
-      </main>
+      <MainLayout>
+        <Layout>
+          <Error message='Материал не найден. Обратитесь в техническую поддержку портала' />
+        </Layout>
+      </MainLayout>
+    );
+  }
+
+  if (data.role === 'guest') {
+    return (
+      <MainLayout>
+        <Layout>
+          <Error message='Не достаточно прав доступа.' />
+        </Layout>
+      </MainLayout>
     );
   }
 
   return (
-    <main className={stylesMain.main}>
+    <MainLayout>
       <div className={styles['material']}>
         <div className={styles['material__video']}>
           <div className={styles['material__header']}>
@@ -156,33 +153,9 @@ const Material = () => {
                 fill='white'
               />
             </svg>
-            {/* {data.data.image !== '' && isShowImage && (
-              <>
-                <img
-                  src={data.data.image}
-                  className={styles.material__image}
-                  alt='Обложка'
-                />
-                <svg
-                  className={styles.material__play}
-                  width='80'
-                  height='80'
-                  viewBox='0 0 80 80'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <circle opacity='0.5' cx='40' cy='40' r='40' fill='#8D8E91' />
-                  <path
-                    d='M53.2778 37.4019C55.2778 38.5566 55.2778 41.4433 53.2778 42.598L35.6112 52.7979C33.6112 53.9526 31.1112 52.5092 31.1112 50.1998V29.8001C31.1112 27.4907 33.6112 26.0473 35.6112 27.202L53.2778 37.4019Z'
-                    fill='white'
-                  />
-                </svg>
-              </>
-            )} */}
             <video
               controls
               ref={videoRef}
-              // controlsList='nodownload'
               onPlay={onViewVideo}
               onPause={() => setShowIcon(true)}
               onLoadedMetadata={formatedTime}
@@ -197,7 +170,7 @@ const Material = () => {
           files={data.data.files}
         />
       </div>
-    </main>
+    </MainLayout>
   );
 };
 

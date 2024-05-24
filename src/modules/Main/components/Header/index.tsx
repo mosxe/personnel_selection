@@ -3,6 +3,10 @@ import PeopleImage from 'assets/svg/people.svg';
 import styles from './styles.module.scss';
 
 const Header = () => {
+  const handleClick = () => {
+    window.location.href = window.location.origin + '/home';
+  };
+
   return (
     <div className={styles.header}>
       <div className={styles.header__wrapper}>
@@ -10,6 +14,7 @@ const Header = () => {
         <h2>Гид по подбору и найму персонала в ОМК</h2>
         <div className={styles.header__navigation}>
           <svg
+            onClick={handleClick}
             width='20'
             height='20'
             viewBox='0 0 20 20'
