@@ -46,6 +46,7 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
   };
 
   const filteredTags = useMemo(() => {
+    console.log(dataManager.tags);
     const dataTags =
       navRole === 'manager'
         ? dataManager.tags
