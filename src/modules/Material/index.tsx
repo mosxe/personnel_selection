@@ -49,12 +49,7 @@ const Material = () => {
   }, []);
 
   const onViewVideo = async () => {
-    console.log('clik video');
     setShowIcon(false);
-    // isShowIcon.current = false;
-    // if (isShowImage) {
-    //   setShowImage(false);
-    // }
     if (
       data?.data !== null &&
       data?.data.status !== 'завершено' &&
@@ -91,7 +86,7 @@ const Material = () => {
     return (
       <MainLayout>
         <Layout>
-          <Error message='Материал не найден. Обратитесь в техническую поддержку портала' />
+          <Error message='Материал не найден. Обратитесь в техническую поддержку портала.' />
         </Layout>
       </MainLayout>
     );
@@ -106,6 +101,10 @@ const Material = () => {
       </MainLayout>
     );
   }
+
+  const isShowAssessmentBtn = data.data.files.some(
+    (file) => file.type === 'Тест'
+  );
 
   return (
     <MainLayout>
@@ -162,6 +161,26 @@ const Material = () => {
             >
               <source src={data.data.link} />
             </video>
+            {isShowAssessmentBtn && (
+              <button className={styles.material__btn} type='button'>
+                Перейти к тестированию
+                <svg
+                  width='7'
+                  height='12'
+                  viewBox='0 0 7 12'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    d='M1 11L6 6L1 1'
+                    stroke='#8D8E91'
+                    strokeWidth='1.5'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                  />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
         <Description

@@ -111,6 +111,48 @@
       }
     }
   }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    gap: 20px;
+    height: 24px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.8px;
+    padding: 0px !important;
+    border: none !important;
+    background-color: var(--page-color-white);
+    color: rgba(135, 138, 142, 1);
+    cursor: pointer;
+    outline: 0 !important;
+    margin: 20px 10px 0px 0px !important;
+    transition: color 0.3s ease;
+
+    & svg path {
+      transition: stroke 0.3s;
+    }
+
+    &:hover {
+      background-color: var(--page-color-white);
+      color: var(--page-color-blue);
+
+      & svg path {
+        stroke: var(--page-color-blue);
+      }
+    }
+
+    &:active {
+      background-color: var(--page-color-white);
+      color: var(--page-color-black);
+
+      & svg path {
+        stroke: var(--page-color-black);
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
