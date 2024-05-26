@@ -241,6 +241,7 @@
         }
       ]
     },
+    "role": "hr_bp",
     "isError": false,
     "errorMessage": ""
   }
