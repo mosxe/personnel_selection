@@ -102,9 +102,7 @@ const Material = () => {
     );
   }
 
-  const isShowAssessmentBtn = data.data.files.some(
-    (file) => file.type === 'Тест'
-  );
+  const findAssessment = data.data.files.find((file) => file.type === 'Тест');
 
   return (
     <MainLayout>
@@ -161,8 +159,12 @@ const Material = () => {
             >
               <source src={data.data.link} />
             </video>
-            {isShowAssessmentBtn && (
-              <button className={styles.material__btn} type='button'>
+            {findAssessment !== undefined && (
+              <button
+                className={styles.material__btn}
+                type='button'
+                onClick={() => window.open(findAssessment.link, '_blank')}
+              >
                 Перейти к тестированию
                 <svg
                   width='7'

@@ -47,7 +47,7 @@ const Card = ({ data }: Props) => {
 
   const isShowStatus =
     status !== '' &&
-    (type === 'Видео' || type === 'Электронный курс' || type === 'Тренажёр');
+    (type === 'Видео' || type === 'Электронный курс' || type === 'Тренажёр' || type === 'Тест');
 
   return (
     <article className={classNameCard} onClick={handleClick}>

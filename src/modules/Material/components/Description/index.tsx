@@ -1,5 +1,5 @@
 ﻿import Type from '../Type';
-import { File } from 'types';
+import { File, Type as IType } from 'types';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -9,6 +9,22 @@ type Props = {
 };
 
 const Description = ({ description, speakers, files }: Props) => {
+  const handleClick = (link: string) => {
+    window.open(link, '_blank');
+  };
+
+  const getBtnText = (type: IType) => {
+    if (
+      type === 'Электронный курс' ||
+      type === 'Видео' ||
+      type === 'Тест' ||
+      type === 'Тренажёр'
+    ) {
+      return 'Смотреть';
+    }
+    return 'Скачать';
+  };
+
   return (
     <div className={`${styles.description}`}>
       {description && (
@@ -33,8 +49,12 @@ const Description = ({ description, speakers, files }: Props) => {
                   <Type type={file.type} />
                   <span className={styles.resource__text}>{file.name}</span>
                 </div>
-                <button className={styles.resource__btn} type='button'>
-                  СКАЧАТЬ
+                <button
+                  className={styles.resource__btn}
+                  type='button'
+                  onClick={() => handleClick(file.link)}
+                >
+                  {getBtnText(file.type)}
                 </button>
               </div>
             );
