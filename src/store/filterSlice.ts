@@ -108,8 +108,6 @@ const filtersSlice = createSlice({
           action.payload.data.dataInterview,
           current(state.selectedTags[state.nav])
         );
-
-        console.log(tempDataProcess);
       }
 
       state.filteredData[state.nav] = {

@@ -10,8 +10,11 @@
   background-color: rgba(223, 10, 119, 1);
 
   & img {
-    width: 18px;
-    height: 18px;
+    display: block;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 18px !important;
+    height: 18px !important;
   }
 
   &__text {

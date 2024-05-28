@@ -241,6 +241,16 @@
         }
       ]
     },
+    "assessment": {
+      "id": "1231231232312312",
+      "title": "Тест",
+      "link": "/_wt/asdasdsdad",
+      "state_id": "4",
+      "status_name": "В процессе",
+      "score": "10",
+      "max_score": "20",
+      "finish_date": "10.12.2024"
+    },
     "role": "hr_bp",
     "isError": false,
     "errorMessage": ""

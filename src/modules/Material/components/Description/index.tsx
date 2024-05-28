@@ -6,18 +6,24 @@ type Props = {
   description: string;
   speakers: string;
   files: File[];
+  onClick: (isShowAssessment: boolean) => void;
 };
 
-const Description = ({ description, speakers, files }: Props) => {
-  const handleClick = (link: string) => {
-    window.open(link, '_blank');
+const Description = ({ description, speakers, files, onClick }: Props) => {
+  const handleClick = (link: string, type: IType) => {
+    if (type === 'Тест') {
+      onClick(true);
+    } else {
+      window.open(link, '_blank');
+    }
   };
 
   const getBtnText = (type: IType) => {
-    if (
+    if (type === 'Тест') {
+      return 'Пройти';
+    } else if (
       type === 'Электронный курс' ||
       type === 'Видео' ||
-      type === 'Тест' ||
       type === 'Тренажёр'
     ) {
       return 'Смотреть';
@@ -52,7 +58,7 @@ const Description = ({ description, speakers, files }: Props) => {
                 <button
                   className={styles.resource__btn}
                   type='button'
-                  onClick={() => handleClick(file.link)}
+                  onClick={() => handleClick(file.link, file.type)}
                 >
                   {getBtnText(file.type)}
                 </button>

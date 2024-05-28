@@ -23,7 +23,6 @@ export interface IDataItem {
   desc: string;
   status: Status;
   category: Category;
-  // role: Role;
   image: string | null;
   tags: Tags;
   link: string;
@@ -63,9 +62,27 @@ export interface IMaterial {
   files: File[];
 }
 
+export interface IAssessment {
+  id: string;
+  title: string;
+  link: string;
+  state_id: string;
+  status_name: string;
+  score: string;
+  max_score: string;
+  finish_date: string;
+}
+
 export interface IResponseMaterial {
   data: IMaterial | null;
+  assessment: IAssessment | null;
   role: Role;
+  isError: boolean;
+  errorMessage: string;
+}
+
+export interface IResponseActiveAssessment {
+  link: string;
   isError: boolean;
   errorMessage: string;
 }

@@ -30,7 +30,8 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
 
   useEffect(() => {
     dispatch(filteringData({ data: dataManager, isActive: false }));
-  }, []);
+    console.log('useEffect');
+  }, [dispatch, dataManager]);
 
   const handleClickNav = (role: Role) => {
     if (role !== navRole) {
@@ -46,7 +47,6 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
   };
 
   const filteredTags = useMemo(() => {
-    console.log(dataManager.tags);
     const dataTags =
       navRole === 'manager'
         ? dataManager.tags
@@ -108,11 +108,11 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
       />
       {/* <Links /> */}
       {filteredData[navRole].dataProcess.length > 0 && (
-        <section className={styles.section} style={{ marginTop: '50px' }}>
+        <section className={styles.section}>
           <Title
             title='Процесс подбора персонала в ОМК'
             image={ProcessImage}
-            tooltipText='В этом разделе вы найдете материалы, которые поясняют как устроен процесс найма персонала в ОМК'
+            tooltipText='В этом разделе собраны материалы о процессе подбора персонала, принятом в ОМК'
           />
           <Section data={filteredData[navRole].dataProcess} />
         </section>
@@ -122,7 +122,7 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
           <Title
             title='Работа в автоматизированной системе подбора персонала Поток'
             image={WorkingImage}
-            tooltipText='В этом разделе вы найдете материалы, которые поясняют как устроен процесс найма персонала в ОМК'
+            tooltipText='В этом разделе собраны инструкции по работе в системе Поток'
           />
           <Section data={filteredData[navRole].dataWorking} />
         </section>
@@ -132,7 +132,7 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
           <Title
             title='Интервью с кандидатами'
             image={InterviewImage}
-            tooltipText='В этом разделе вы найдете материалы, которые поясняют как устроен процесс найма персонала в ОМК'
+            tooltipText='В этом разделе собраны материалы, рассказывающие о принципах, правилах и инструментах проведения интервью с кандидатами на вакансии'
           />
           <Section data={filteredData[navRole].dataInterview} />
         </section>

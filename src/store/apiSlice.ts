@@ -4,7 +4,9 @@ import {
   IResponseData,
   IResponseMaterial,
   IMaterial,
-  Role
+  Role,
+  IAssessment,
+  IResponseActiveAssessment
 } from 'types';
 import mockData from './mockData.json';
 const baseURL = window.location.origin;
@@ -22,6 +24,7 @@ const urlBuilder = (params?: { [key: string]: any }) => {
 
 export const API = createApi({
   reducerPath: 'API',
+  refetchOnFocus: true,
   baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
   endpoints: (builder) => ({
     getData: builder.query<IResponseData, void>({
@@ -77,6 +80,7 @@ export const API = createApi({
         if (import.meta.env.DEV) {
           const mockDataResponse: IResponseMaterial = {
             data: mockData.material.data as IMaterial,
+            assessment: mockData.material.assessment as IAssessment,
             role: mockData.material.role as Role,
             isError: false,
             errorMessage: ''
@@ -98,6 +102,16 @@ export const API = createApi({
           id
         })
       })
+    }),
+    activeAssessment: builder.query<IResponseActiveAssessment, string>({
+      query: (assessment_id: string) => ({
+        url: API_URL + '&action=activeAssessment',
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          assessment_id
+        })
+      })
     })
   })
 });
@@ -106,5 +120,7 @@ export const {
   useGetDataQuery,
   useLazyGetDataQuery,
   useGetMaterialQuery,
-  useLazyUpdateStatusMaterialQuery
+  useLazyGetMaterialQuery,
+  useLazyUpdateStatusMaterialQuery,
+  useLazyActiveAssessmentQuery
 } = API;
