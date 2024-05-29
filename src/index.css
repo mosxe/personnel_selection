@@ -56,6 +56,10 @@
   font-family: 'Verdana' !important;
 }
 
+#root-personnel-selection img {
+  top: 0px;
+}
+
 #wt-container > footer {
   display: none;
 }

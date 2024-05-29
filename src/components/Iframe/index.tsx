@@ -13,11 +13,12 @@ const Iframe = ({ isShow, onClose, link }: Props): JSX.Element | null => {
 
   const addStyles = (ev: any) => {
     const iframeTarget = ev.target as HTMLIFrameElement;
-    const newStyle = document.createElement('style');
-    newStyle.textContent = `body {font-size: 16px !important;} div.wtq-body {height: 100 !important; overflow-y: auto !important;} div.wtq-q-itms-area {
-      height: auto !important;} div.wtq-q-footer {position: relative !important;}`;
+    console.log(iframeTarget.contentDocument);
+    // const newStyle = document.createElement('style');
+    // newStyle.textContent = `body {font-size: 16px !important;} div.wtq-body {height: 100 !important; overflow-y: auto !important;} div.wtq-q-itms-area {
+    //   height: auto !important;} div.wtq-q-footer {position: relative !important;}`;
 
-    iframeTarget.contentDocument?.head.appendChild(newStyle);
+    // iframeTarget.contentDocument?.head.appendChild(newStyle);
   };
 
   useEffect(() => {
@@ -57,7 +58,6 @@ const Iframe = ({ isShow, onClose, link }: Props): JSX.Element | null => {
               title='Тестирование'
               allowFullScreen={true}
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              // sandbox='allow-scripts'
             ></iframe>
           </div>
         </div>
