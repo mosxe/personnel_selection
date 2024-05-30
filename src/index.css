@@ -31,7 +31,7 @@
   --page-color-dark-gray: rgba(141, 142, 145, 1);
   --page-color-purple: rgba(122, 47, 150, 1);
   --page-max-width-layout: 1440px;
-  --page-max-width-main: 1256px;
+  --page-max-width-main: 1272px;
 }
 
 #content.page-content {
@@ -66,4 +66,13 @@
 
 #wt-container > .page-content {
   padding-bottom: 0px !important;
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 1023) {
+}
+
+@media screen and (max-width: 576px) {
 }

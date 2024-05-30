@@ -42,7 +42,9 @@ const Header = () => {
           <span className={styles.header__text}>Подбор персонала</span>
         </div>
       </div>
-      <img src={PeopleImage} alt='картинка' width={333} height={181} />
+      <div className={styles.header__img}>
+        <img src={PeopleImage} alt='картинка' />
+      </div>
     </div>
   );
 };

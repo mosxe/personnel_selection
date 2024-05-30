@@ -9,8 +9,6 @@ import { initialState } from 'store/store';
 const Main = () => {
   const { data = initialState, isLoading, isError } = useGetDataQuery();
 
-  console.log(data);
-
   if (isLoading) {
     return (
       <MainLayout>

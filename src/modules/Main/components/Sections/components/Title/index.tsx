@@ -13,7 +13,9 @@ const Title = ({ title, image, tooltipText }: Props) => {
       <img src={image} width={50} height={50} alt='Картинка' />
       <div className={styles['section-title__container']}>
         <div className={styles['section-title__text']}>{title}</div>
-        <Tooltip id='tooltip_help' text={tooltipText} />
+        <div className={styles['section-title__tooltip']}>
+          <Tooltip id='tooltip_help' text={tooltipText} />
+        </div>
       </div>
     </div>
   );

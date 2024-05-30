@@ -30,7 +30,6 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
 
   useEffect(() => {
     dispatch(filteringData({ data: dataManager, isActive: false }));
-    console.log('useEffect');
   }, [dispatch, dataManager]);
 
   const handleClickNav = (role: Role) => {
@@ -94,6 +93,31 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
       dispatch(filteringData({ data: selectedData, isActive: true }));
     }
   };
+
+  if (
+    !filteredData[navRole].dataProcess.length &&
+    !filteredData[navRole].dataInterview.length &&
+    !filteredData[navRole].dataWorking.length
+  ) {
+    return (
+      <>
+        <Filters
+          role={role}
+          navRole={navRole}
+          tags={filteredTags}
+          onClickNav={handleClickNav}
+          onChangeTag={handleChangeTag}
+          onShow={onShow}
+          onClear={onClear}
+        />
+        <section className={styles.section}>
+          <div className={styles['section__no-data']}>
+            Материалы отсутствуют
+          </div>
+        </section>
+      </>
+    );
+  }
 
   return (
     <>
