@@ -22,7 +22,8 @@ export default defineConfig(({ mode }: ViteConfig) => {
         modules: '/src/modules',
         pages: '/src/pages',
         types: '/src/types',
-        store: '/src/store'
+        store: '/src/store',
+        hooks: '/src/hooks'
       }
     },
     plugins: [react()],

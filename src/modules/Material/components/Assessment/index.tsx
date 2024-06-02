@@ -79,9 +79,9 @@ const Assessment = ({
           )}
           <div className={styles['assessment__container']}>
             <span className={classNameStatus}>ТЕСТ {statusName}</span>
-            <div>
+            <div className={styles.assessment__score}>
               <strong>Набранный балл: </strong>
-              <span className={styles['assessment__score']}>{scoreName}</span>
+              <span>{scoreName}</span>
             </div>
             <div className={styles['assessment__date']}>
               <strong>Дата последней попытки: </strong>

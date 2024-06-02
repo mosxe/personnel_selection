@@ -20,7 +20,8 @@
       "modules/*": ["modules/*"],
       "pages:/*": ["pages/*"],
       "types:/*": ["types/*"],
-      "store:/*": ["store/*"]
+      "store:/*": ["store/*"],
+      "hooks:/*": ["hooks/*"]
     },
     /* Linting */
     "strict": true,

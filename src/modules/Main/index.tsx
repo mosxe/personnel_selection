@@ -30,13 +30,13 @@ const Main = () => {
       </MainLayout>
     );
   }
-
+  console.log(data.role);
   if (data.role === 'guest') {
     return (
       <MainLayout>
         <Header />
         <Layout>
-          <Error message='Не достаточно прав доступа.' />
+          <Error message='Недостаточно прав доступа.' />
         </Layout>
       </MainLayout>
     );

@@ -138,7 +138,7 @@
           "tags": []
         }
       ],
-      "tags": ["CourseLab", "обучение", "вакансии"]
+      "tags": []
     },
     "dataHRBP": {
       "dataProcess": [
@@ -203,7 +203,7 @@
       "dataInterview": [],
       "tags": []
     },
-    "role": "recruiter",
+    "role": "guest",
     "isError": false,
     "errorMessage": ""
   },
@@ -251,7 +251,7 @@
       "max_score": "20",
       "finish_date": "10.12.2024"
     },
-    "role": "hr_bp",
+    "role": "guest",
     "isError": false,
     "errorMessage": ""
   }

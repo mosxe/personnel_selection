@@ -9,10 +9,10 @@ type Props = {
 
 const Navs = ({ role, navRole, onClick }: Props) => {
   return (
-    <div className={styles.filters__navs}>
+    <div className={styles.navs}>
       <button
-        className={`${styles.filters__nav} ${
-          navRole === 'manager' && styles.filters__nav_active
+        className={`${styles.navs__item} ${
+          navRole === 'manager' && styles.navs__item_active
         }`}
         type='button'
         onClick={() => onClick('manager')}
@@ -100,8 +100,8 @@ const Navs = ({ role, navRole, onClick }: Props) => {
       </button>
       {role === 'recruiter' && (
         <button
-          className={`${styles.filters__nav} ${
-            navRole === 'recruiter' && styles.filters__nav_active
+          className={`${styles.navs__item} ${
+            navRole === 'recruiter' && styles.navs__item_active
           }`}
           type='button'
           onClick={() => onClick('recruiter')}
@@ -323,8 +323,8 @@ const Navs = ({ role, navRole, onClick }: Props) => {
         </button>
       )}
       <button
-        className={`${styles.filters__nav} ${
-          navRole === 'hr_bp' && styles.filters__nav_active
+        className={`${styles.navs__item} ${
+          navRole === 'hr_bp' && styles.navs__item_active
         }`}
         type='button'
         onClick={() => onClick('hr_bp')}

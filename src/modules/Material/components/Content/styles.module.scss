@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   flex-basis: 33.333333%;
+  flex-shrink: 0;
   max-width: 33.333333%;
   gap: 30px;
 
@@ -110,6 +111,25 @@
 @media screen and (max-width: 576px) {
   .resource__wrapper {
     gap: 10px !important;
-    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .resource {
+    flex-direction: column;
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .resource {
+    flex-direction: column;
+
+    &__btn {
+      width: 100%;
+    }
   }
 }

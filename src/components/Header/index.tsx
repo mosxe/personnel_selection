@@ -1,6 +1,7 @@
-﻿// import { useWindowSize } from 'hooks/useWindowSize';
+﻿import { useWindowSize } from 'hooks/useWindowSize';
 import { useNavigate } from 'react-router-dom';
 import Image from 'assets/images/header.jpg';
+import ImageSmall from 'assets/images/header_small.jpg';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -9,14 +10,15 @@ type Props = {
 
 const Header = ({ isOnlyImage = true }: Props) => {
   const navigate = useNavigate();
-  // const [width] = useWindowSize();
-  // const imageSrc = width < 577 ? imageLinkSmall : imageLink;
-  // const marginTop =
-  // data?.header_margin_top !== undefined ? data.header_margin_top : 0;
+  const [width] = useWindowSize();
 
   return (
     <div className={styles.header}>
-      <img src={Image} alt='Заголовок' />
+      {width < 577 ? (
+        <img src={ImageSmall} alt='Заголовок' />
+      ) : (
+        <img src={Image} alt='Заголовок' />
+      )}
       {!isOnlyImage && (
         <div className={styles.header__wrapper}>
           <div className={styles.header__container}>
@@ -27,7 +29,6 @@ const Header = ({ isOnlyImage = true }: Props) => {
               Подбор персонала в ОМК. Введение
             </div>
           </div>
-
           <button
             className={styles.header__btn}
             type='button'

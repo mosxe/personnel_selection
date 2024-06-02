@@ -1,11 +1,13 @@
 ﻿import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useWindowSize } from 'hooks/useWindowSize';
 import { Main as MainLayout, Layout } from 'components/Layout';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
-import Description from './components/Description';
+import Content, { Description, Speakers, Files } from './components/Content';
 import Video from './components/Video';
 import Assessment from './components/Assessment';
+import Button from './components/Button';
 import {
   useGetMaterialQuery,
   useLazyGetMaterialQuery,
@@ -29,6 +31,7 @@ const Material = () => {
   const [updateData] = useLazyGetDataQuery({ refetchOnFocus: false });
   const [isShowAssessment, setShowAssessment] = useState<boolean>(false);
   const [time, setTime] = useState<string>('');
+  const [width] = useWindowSize();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -90,7 +93,7 @@ const Material = () => {
     return (
       <MainLayout>
         <Layout>
-          <Error message='Не достаточно прав доступа.' />
+          <Error message='Недостаточно прав доступа.' />
         </Layout>
       </MainLayout>
     );
@@ -105,6 +108,12 @@ const Material = () => {
     <>
       <MainLayout>
         <div className={styles['material']}>
+          {width < 768 && (
+            <div className={styles.material__content}>
+              <Description description={data.data.content} />
+              <Speakers speakers={data.data.speakers} />
+            </div>
+          )}
           <div className={styles['material__video']}>
             <div className={styles['material__header']}>
               <div className={styles['material__wrapper']}>
@@ -157,62 +166,24 @@ const Material = () => {
                   updateStatus={updateStatus}
                 />
               )}
-              {data.assessment !== null && !isShowAssessment && (
-                <button
-                  className={styles.material__btn}
-                  type='button'
-                  onClick={() => setShowAssessment(true)}
-                >
-                  Перейти к тестированию
-                  <svg
-                    width='7'
-                    height='12'
-                    viewBox='0 0 7 12'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      d='M1 11L6 6L1 1'
-                      stroke='#8D8E91'
-                      strokeWidth='1.5'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                    />
-                  </svg>
-                </button>
-              )}
-              {isShowAssessment && (
-                <button
-                  className={styles.material__btn}
-                  type='button'
-                  onClick={() => setShowAssessment(false)}
-                >
-                  Смотреть видео
-                  <svg
-                    width='7'
-                    height='12'
-                    viewBox='0 0 7 12'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      d='M1 11L6 6L1 1'
-                      stroke='#8D8E91'
-                      strokeWidth='1.5'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                    />
-                  </svg>
-                </button>
+              {data.assessment !== null && (
+                <Button
+                  isShowAssessment={isShowAssessment}
+                  handleClick={handleShowAssessment}
+                />
               )}
             </div>
           </div>
-          <Description
-            description={data.data.content}
-            speakers={data.data.speakers}
-            files={data.data.files}
-            onClick={handleShowAssessment}
-          />
+          {width > 767 ? (
+            <Content
+              description={data.data.content}
+              speakers={data.data.speakers}
+              files={data.data.files}
+              onClick={handleShowAssessment}
+            />
+          ) : (
+            <Files files={data.data.files} onClick={handleShowAssessment} />
+          )}
         </div>
       </MainLayout>
     </>
