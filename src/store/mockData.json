@@ -203,7 +203,7 @@
       "dataInterview": [],
       "tags": []
     },
-    "role": "guest",
+    "role": "recruiter",
     "isError": false,
     "errorMessage": ""
   },
@@ -217,7 +217,7 @@
       "speakers": "Валентина Петровна, Максим Иванов",
       "image": "",
       "status": "завершено",
-      "link": "download_file.html?file_id=7058232771040804710",
+      "link": "https://videocdn.cdnpk.net/euphony/content/video/partners0266/large_watermarked/hf9158c11_146879_FPpreview.mp4?filename=5462406_coll_wavebreak_neuron_pink_1920x1080.mp4",
       "files": [
         {
           "name": "Результаты бенчмаркинга клиентов Websoft.pdf",
@@ -251,7 +251,7 @@
       "max_score": "20",
       "finish_date": "10.12.2024"
     },
-    "role": "guest",
+    "role": "recruiter",
     "isError": false,
     "errorMessage": ""
   }
