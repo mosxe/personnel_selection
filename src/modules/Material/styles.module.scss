@@ -97,6 +97,23 @@
       border-bottom-right-radius: 10px;
       background-color: var(--page-color-gray);
       cursor: pointer;
+
+      // &::-webkit-media-controls-play-button {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // transform: translate(50%, 50%);
+      // height: 60px;
+      // width: 60px;
+      // background-color: #f00;
+      // border-radius: 50%;
+      // z-index: 1000;
+      // }
+
+      // &::-webkit-media-controls-start-playback-button {
+      // background-color: #f00;
+      // border-radius: 50%;
+      // }
     }
 
     &:hover .material__play circle {

@@ -30,7 +30,7 @@ const Main = () => {
       </MainLayout>
     );
   }
-  console.log(data.role);
+
   if (data.role === 'guest') {
     return (
       <MainLayout>

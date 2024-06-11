@@ -109,6 +109,7 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
           onChangeTag={handleChangeTag}
           onShow={onShow}
           onClear={onClear}
+          dataHRBP={dataHRBP}
         />
         <section className={styles.section}>
           <div className={styles['section__no-data']}>
@@ -129,6 +130,7 @@ const Sections = ({ dataManager, dataHRBP, dataRecruiter, role }: Props) => {
         onChangeTag={handleChangeTag}
         onShow={onShow}
         onClear={onClear}
+        dataHRBP={dataHRBP}
       />
       {/* <Links /> */}
       {filteredData[navRole].dataProcess.length > 0 && (

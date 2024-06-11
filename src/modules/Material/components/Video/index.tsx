@@ -1,6 +1,6 @@
-﻿import { useState, useRef } from 'react';
-import classnames from 'classnames';
-import styles from '../../styles.module.scss';
+﻿import { useRef } from 'react';
+// import classnames from 'classnames';
+// import styles from '../../styles.module.scss';
 
 type Props = {
   id: string;
@@ -21,13 +21,13 @@ const Video = ({
 }: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const isStartPlaying = useRef<boolean>(false);
-  const [isShowIcon, setShowIcon] = useState<boolean>(true);
-  const classNameIcon = classnames(styles.material__play, {
-    [styles.material__play_show]: isShowIcon
-  });
+  // const [isShowIcon, setShowIcon] = useState<boolean>(true);
+  // const classNameIcon = classnames(styles.material__play, {
+  //   [styles.material__play_show]: isShowIcon
+  // });
 
   const onViewVideo = async () => {
-    setShowIcon(false);
+    // setShowIcon(false);
     if (status !== 'завершено' && !isStartPlaying.current) {
       isStartPlaying.current = true;
       await updateStatus(id);
@@ -37,7 +37,7 @@ const Video = ({
 
   return (
     <>
-      <svg
+      {/* <svg
         className={classNameIcon}
         width='80'
         height='80'
@@ -50,12 +50,12 @@ const Video = ({
           d='M53.2778 37.4019C55.2778 38.5566 55.2778 41.4433 53.2778 42.598L35.6112 52.7979C33.6112 53.9526 31.1112 52.5092 31.1112 50.1998V29.8001C31.1112 27.4907 33.6112 26.0473 35.6112 27.202L53.2778 37.4019Z'
           fill='white'
         />
-      </svg>
+      </svg> */}
       <video
         controls
         ref={videoRef}
         onPlay={onViewVideo}
-        onPause={() => setShowIcon(true)}
+        // onPause={() => setShowIcon(true)}
         onLoadedMetadata={onFormatedTime}
       >
         <source src={link} />

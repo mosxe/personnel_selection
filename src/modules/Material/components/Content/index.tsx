@@ -13,7 +13,10 @@ const Speakers = ({ speakers }: Pick<Props, 'speakers'>) => {
   return (
     <div className={styles.description__wrapper}>
       <div className={styles.description__title}>Спикеры</div>
-      <div className={styles.description__text}>{speakers}</div>
+      <div
+        className={styles.description__text}
+        dangerouslySetInnerHTML={{ __html: speakers }}
+      ></div>
     </div>
   );
 };
@@ -22,7 +25,10 @@ const Description = ({ description }: Pick<Props, 'description'>) => {
   return (
     <div className={styles.description__wrapper}>
       <div className={styles.description__title}>Содержание</div>
-      <div className={styles.description__text}>{description}</div>
+      <div
+        className={styles.description__text}
+        dangerouslySetInnerHTML={{ __html: description }}
+      ></div>
     </div>
   );
 };

@@ -32,7 +32,7 @@ const Header = ({ isOnlyImage = true }: Props) => {
           <button
             className={styles.header__btn}
             type='button'
-            onClick={() => navigate('/personnel_selection')}
+            onClick={() => navigate('/omk_recruitment')}
           >
             Вернуться к подбору персонала
           </button>

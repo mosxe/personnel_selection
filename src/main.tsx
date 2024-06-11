@@ -10,12 +10,12 @@ import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: '/personnel_selection',
+    path: '/omk_recruitment',
     element: <MainPage />,
     errorElement: <Error />
   },
   {
-    path: '/personnel_selection/:id',
+    path: '/omk_recruitment/:id',
     element: <MaterialPage />,
     errorElement: <Error />
   },

@@ -34,7 +34,7 @@ const Card = ({ data }: Props) => {
 
   const handleClick = async () => {
     if (type === 'Видео') {
-      window.open(`/personnel_selection/${id}`, '_blank');
+      window.open(`/omk_recruitment/${id}`, '_blank');
       return;
     }
 
@@ -47,7 +47,10 @@ const Card = ({ data }: Props) => {
 
   const isShowStatus =
     status !== '' &&
-    (type === 'Видео' || type === 'Электронный курс' || type === 'Тренажёр' || type === 'Тест');
+    (type === 'Видео' ||
+      type === 'Электронный курс' ||
+      type === 'Тренажёр' ||
+      type === 'Тест');
 
   return (
     <article className={classNameCard} onClick={handleClick}>

@@ -3,7 +3,7 @@ import { useWindowSize } from 'hooks/useWindowSize';
 import Navs from './components/Navs';
 import FiltersMobile from './components/FiltersMobile';
 import CheckBox from 'components/CheckBox';
-import { Role, Tags } from 'types';
+import { Role, Tags, IResponseItem } from 'types';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -14,6 +14,7 @@ type Props = {
   onChangeTag: (e: React.ChangeEvent<HTMLInputElement>, label: string) => void;
   onShow: () => void;
   onClear: () => void;
+  dataHRBP: IResponseItem;
 };
 
 const Filters = ({
@@ -22,7 +23,8 @@ const Filters = ({
   onClickNav,
   onChangeTag,
   onShow,
-  onClear
+  onClear,
+  dataHRBP
 }: Props) => {
   const navRole = useAppSelector((state) => state.filters.nav);
   const selectedTags = useAppSelector(
@@ -33,7 +35,12 @@ const Filters = ({
   return (
     <div className={styles.filters}>
       {(role === 'recruiter' || role === 'hr_bp') && (
-        <Navs role={role} navRole={navRole} onClick={onClickNav} />
+        <Navs
+          role={role}
+          navRole={navRole}
+          onClick={onClickNav}
+          dataHRBP={dataHRBP}
+        />
       )}
       {tags.length > 0 &&
         (width > 480 ? (
