@@ -22,7 +22,8 @@ const Card = ({ data }: Props) => {
     [styles.card_red]: category === 'Общие вводные материалы',
     [styles.card_blue]: category === 'Найм рабочего персонала',
     [styles.card_purple]: category === 'Подбор РСС',
-    [styles.card_passed]: status === 'завершено' && type !== 'Видео',
+    [styles.card_passed]:
+      status === 'завершено' && type !== 'Видео' && type !== 'Электронный курс',
     [styles.card_shadow]: type === 'Видео',
     [styles.card_hover]: type !== 'Видео'
   });
